@@ -1,0 +1,234 @@
+@import "tailwindcss";
+@import './tokens.css';
+@import './animations.css';
+
+/* Base Resets & Typography scoped in @layer base */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+    background-color: var(--bg-base);
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  section[id] {
+    scroll-margin-top: 96px;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg-base);
+    background-image: 
+      radial-gradient(circle at 15% 20%, rgba(24, 86, 243, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 85% 60%, rgba(16, 185, 129, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
+    background-attachment: fixed;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+}
+
+/* Tactile Neumorphic & Skeuomorphic Utility Classes */
+
+.neu-raised-sm {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-raised-sm);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.neu-raised {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-raised-md);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.neu-raised:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-raised-lg);
+}
+
+.neu-raised-lg {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-raised-lg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+}
+
+.neu-sunken {
+  background: var(--bg-surface-sunken);
+  box-shadow: var(--shadow-inset-md);
+  border: 1px solid var(--border-dark-subtle);
+  border-radius: var(--radius-md);
+}
+
+.neu-sunken-pill {
+  background: var(--bg-surface-sunken);
+  box-shadow: var(--shadow-inset-sm);
+  border: 1px solid var(--border-dark-subtle);
+  border-radius: var(--radius-pill);
+}
+
+.neu-card-interactive {
+  background: var(--bg-card);
+  box-shadow: var(--shadow-raised-md);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.neu-card-interactive:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-raised-xl);
+  border-color: rgba(24, 86, 243, 0.25);
+  background: var(--bg-card-hover);
+}
+
+.neu-button-primary {
+  background: linear-gradient(135deg, #1856F3 0%, #0A3A80 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--glow-blue), 0 4px 10px rgba(4, 38, 86, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.neu-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-blue-strong), 0 8px 18px rgba(4, 38, 86, 0.25);
+}
+
+.neu-button-primary:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-inset-sm);
+}
+
+.neu-button-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-raised-sm);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.neu-button-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-raised-md);
+  color: var(--brand-blue);
+  border-color: rgba(24, 86, 243, 0.3);
+}
+
+.neu-button-secondary:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-inset-sm);
+}
+
+.neu-button-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-raised-sm);
+  border: 1px solid var(--border-subtle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.neu-button-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-raised-md);
+  color: var(--brand-blue);
+}
+
+.neu-button-icon:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-inset-sm);
+}
+
+/* Glassmorphism Subtle Frost Accent */
+.glass-header {
+  background: rgba(238, 242, 246, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Containers */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Gradient Text */
+.gradient-text-blue {
+  background: linear-gradient(135deg, #042656 0%, #1856F3 60%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
