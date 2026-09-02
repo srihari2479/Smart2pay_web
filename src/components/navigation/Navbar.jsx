@@ -45,7 +45,15 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
     if (isHome) {
       scrollTo(`#${sectionId}`);
     } else {
-      navigate(`/#${sectionId}`);
+      navigate('/', { state: { targetSection: sectionId } });
+    }
+  };
+
+  const handleLogoClick = (e) => {
+    if (isHome) {
+      e.preventDefault();
+      window.scrollTo(0, 0);
+      scrollTo(0);
     }
   };
 
@@ -60,7 +68,7 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Brand Logo */}
-        <Link to="/" className="outline-none shrink-0" aria-label="Smart2Pay Home">
+        <Link to="/" onClick={handleLogoClick} className="outline-none shrink-0" aria-label="Smart2Pay Home">
           <BrandLogo size={42} textDark={true} />
         </Link>
 

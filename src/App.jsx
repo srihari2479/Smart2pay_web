@@ -12,15 +12,28 @@ import { useLenisSmoothScroll } from './hooks/useLenisSmoothScroll';
  * Helper component that resets window scroll position on route change
  */
 function ScrollToTop({ scrollTo }) {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, state } = useLocation();
 
   useEffect(() => {
-    if (hash) {
-      scrollTo(`#${hash.replace('#', '')}`);
+    // If navigating back to Home with targetSection in state
+    if (state?.targetSection) {
+      setTimeout(() => {
+        scrollTo(`#${state.targetSection}`);
+      }, 100);
+      return;
+    }
+
+    // Clean hash check - ignore mangled HashRouter paths like #/ or #/#ecosystem
+    const cleanHash = hash ? hash.replace(/^[#\/]+/, '') : '';
+    if (cleanHash && document.getElementById(cleanHash)) {
+      setTimeout(() => {
+        scrollTo(`#${cleanHash}`);
+      }, 100);
     } else {
+      // By default always scroll to top (0,0) to show Hero section
       window.scrollTo(0, 0);
     }
-  }, [pathname, hash, scrollTo]);
+  }, [pathname, hash, state, scrollTo]);
 
   return null;
 }
