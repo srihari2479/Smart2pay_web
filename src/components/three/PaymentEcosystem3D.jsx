@@ -25,10 +25,11 @@ export default function PaymentEcosystem3D({ scrollProgress = 0, activeStep = 0,
   useFrame((state) => {
     if (!groupRef.current) return;
     const t = state.clock.getElapsedTime();
+    const m = mouse?.current || mouse || { x: 0, y: 0, isHovered: false };
 
     // 1. Organic Parallax & Gentle Network Sway
-    const targetRotY = (mouse.x * 0.12) + Math.sin(t * 0.2) * 0.08 + (scrollProgress * 0.35);
-    const targetRotX = (mouse.y * 0.08) + Math.cos(t * 0.18) * 0.04;
+    const targetRotY = (m.x * 0.12) + Math.sin(t * 0.2) * 0.08 + (scrollProgress * 0.35);
+    const targetRotX = (m.y * 0.08) + Math.cos(t * 0.18) * 0.04;
     
     groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, targetRotY, 0.06);
     groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, targetRotX, 0.06);

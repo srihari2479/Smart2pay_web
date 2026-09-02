@@ -167,7 +167,7 @@ export default function UtilityServicesShowcase({ onOpenDemoModal }) {
               }}
             >
               {/* Full Skeuomorphic Card Screen */}
-              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-6 sm:p-10 rounded-3xl border border-white shadow-[0_20px_50px_rgba(163,177,198,0.45),inset_0_1px_1px_rgba(255,255,255,1)] hover:shadow-[0_25px_60px_rgba(163,177,198,0.55)] transition-all">
+              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-6 sm:p-10 rounded-3xl border border-white/90 shadow-[0_4px_16px_rgba(163,177,198,0.12)] hover:shadow-[0_6px_20px_rgba(163,177,198,0.16)] transition-all">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                   
                   {/* Left Column: Numbered Badge, Title, Description, and Features */}
@@ -176,17 +176,17 @@ export default function UtilityServicesShowcase({ onOpenDemoModal }) {
                     {/* Top Status Header */}
                     <div className="flex items-center gap-3 mb-4 flex-wrap">
                       {/* Step Number Coin */}
-                      <span className="w-8 h-8 rounded-full bg-[#042656] text-white font-mono text-xs font-bold flex items-center justify-center shadow-md">
+                      <span className="w-8 h-8 rounded-full bg-[#042656] text-white font-mono text-xs font-bold flex items-center justify-center shadow-xs">
                         {service.num}
                       </span>
 
                       {/* Category Badge */}
-                      <span className="text-xs font-black uppercase tracking-wider text-[#042656] bg-white px-3 py-1 rounded-full border border-[#CBD5E1] shadow-sm">
+                      <span className="text-xs font-black uppercase tracking-wider text-[#042656] bg-white px-3 py-1 rounded-full border border-[#CBD5E1] shadow-xs">
                         {service.category}
                       </span>
 
                       {/* Feature Badge */}
-                      <span className={`text-xs font-bold px-3 py-1 rounded-full border shadow-sm flex items-center gap-1.5 ${service.badgeBg}`}>
+                      <span className={`text-xs font-bold px-3 py-1 rounded-full border shadow-xs flex items-center gap-1.5 ${service.badgeBg}`}>
                         <CheckCircle2 size={13} />
                         {service.badge}
                       </span>
@@ -212,7 +212,7 @@ export default function UtilityServicesShowcase({ onOpenDemoModal }) {
                       {service.features.map((feat, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/90 border border-white shadow-[2px_2px_6px_rgba(163,177,198,0.25),-2px_-2px_4px_rgba(255,255,255,0.9)]"
+                          className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/90 border border-white shadow-[1px_1px_3px_rgba(163,177,198,0.12)]"
                         >
                           <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-[#10B981] shrink-0">
                             <CheckCircle2 size={13} />
@@ -229,7 +229,7 @@ export default function UtilityServicesShowcase({ onOpenDemoModal }) {
                       icon={ArrowRight}
                       iconPosition="right"
                       onClick={onOpenDemoModal}
-                      className="shadow-[0_10px_25px_rgba(24,86,243,0.35)]"
+                      className="shadow-[0_4px_14px_rgba(24,86,243,0.18)]"
                     >
                       Integrate {service.category}
                     </Button>
@@ -237,7 +237,7 @@ export default function UtilityServicesShowcase({ onOpenDemoModal }) {
 
                   {/* Right Column: Lottie Animation & Live Telemetry Glass Card */}
                   <div className="lg:col-span-5 flex items-center justify-center">
-                    <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white/95 to-[#F1F5F9]/90 border border-white shadow-[8px_8px_24px_rgba(163,177,198,0.35),-8px_-8px_20px_rgba(255,255,255,0.95)] flex flex-col items-center justify-center relative overflow-hidden">
+                    <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white/95 to-[#F1F5F9]/90 border border-white shadow-[2px_3px_10px_rgba(163,177,198,0.14)] flex flex-col items-center justify-center relative overflow-hidden">
                       
                       {/* Interactive Lottie Stage */}
                       <div className="w-full h-52 sm:h-64 flex items-center justify-center">

@@ -36,22 +36,22 @@
   --text-on-dark: #FFFFFF;
   --text-brand: #042656;
 
-  /* Neumorphic / Skeuomorphic Shadows - Dual Light & Shadow System */
-  --shadow-raised-sm: 4px 4px 10px rgba(163, 177, 198, 0.45), -4px -4px 10px rgba(255, 255, 255, 0.85);
-  --shadow-raised-md: 8px 8px 18px rgba(163, 177, 198, 0.5), -8px -8px 18px rgba(255, 255, 255, 0.9);
-  --shadow-raised-lg: 14px 14px 28px rgba(163, 177, 198, 0.55), -14px -14px 28px rgba(255, 255, 255, 0.95);
-  --shadow-raised-xl: 20px 20px 40px rgba(163, 177, 198, 0.6), -20px -20px 40px rgba(255, 255, 255, 1);
+  /* Lightweight Modern Soft Shadows System */
+  --shadow-raised-sm: 2px 3px 8px rgba(163, 177, 198, 0.18), -2px -3px 8px rgba(255, 255, 255, 0.9);
+  --shadow-raised-md: 4px 6px 14px rgba(163, 177, 198, 0.2), -4px -6px 14px rgba(255, 255, 255, 0.95);
+  --shadow-raised-lg: 6px 10px 20px rgba(163, 177, 198, 0.22), -6px -10px 20px rgba(255, 255, 255, 0.95);
+  --shadow-raised-xl: 10px 16px 28px rgba(163, 177, 198, 0.25), -10px -16px 28px rgba(255, 255, 255, 1);
   
-  /* Inset / Pressed Shadows */
-  --shadow-inset-sm: inset 2px 2px 5px rgba(163, 177, 198, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
-  --shadow-inset-md: inset 4px 4px 8px rgba(163, 177, 198, 0.55), inset -4px -4px 8px rgba(255, 255, 255, 0.85);
-  --shadow-inset-lg: inset 6px 6px 12px rgba(163, 177, 198, 0.6), inset -6px -6px 12px rgba(255, 255, 255, 0.9);
+  /* Soft Inset / Pressed Shadows */
+  --shadow-inset-sm: inset 1px 1px 3px rgba(163, 177, 198, 0.2), inset -1px -1px 3px rgba(255, 255, 255, 0.7);
+  --shadow-inset-md: inset 2px 2px 5px rgba(163, 177, 198, 0.22), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+  --shadow-inset-lg: inset 3px 3px 8px rgba(163, 177, 198, 0.25), inset -3px -3px 8px rgba(255, 255, 255, 0.85);
 
-  /* Tactical Colored Glows */
-  --glow-blue: 0 10px 25px -4px rgba(24, 86, 243, 0.35);
-  --glow-blue-strong: 0 14px 35px -5px rgba(24, 86, 243, 0.5);
-  --glow-emerald: 0 10px 25px -4px rgba(16, 185, 129, 0.35);
-  --glow-gold: 0 10px 25px -4px rgba(245, 158, 11, 0.35);
+  /* Soft Ambient Glows */
+  --glow-blue: 0 4px 16px rgba(24, 86, 243, 0.16);
+  --glow-blue-strong: 0 6px 22px rgba(24, 86, 243, 0.24);
+  --glow-emerald: 0 4px 16px rgba(16, 185, 129, 0.16);
+  --glow-gold: 0 4px 16px rgba(245, 158, 11, 0.16);
 
   /* Subtle Borders & Bevels */
   --border-subtle: rgba(255, 255, 255, 0.7);

@@ -1,13 +1,16 @@
-import { useState, useCallback } from 'react';
+import { useRef, useCallback } from 'react';
 
 /**
- * Hook for 3D mouse tilt parallax on interactive cards
+ * High-performance RAF ref-based 3D mouse tilt hook (0 React re-renders during mousemove)
  */
-export function useMouseTilt(maxTilt = 12) {
-  const [tilt, setTilt] = useState({ x: 0, y: 0, glareX: 50, glareY: 50 });
+export function useMouseTilt(maxTilt = 10) {
+  const cardRef = useRef(null);
+  const glareRef = useRef(null);
+  const rafIdRef = useRef(null);
 
   const handleMouseMove = useCallback((e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
@@ -20,22 +23,37 @@ export function useMouseTilt(maxTilt = 12) {
     const glareX = (x / rect.width) * 100;
     const glareY = (y / rect.height) * 100;
 
-    setTilt({ x: rotateX, y: rotateY, glareX, glareY });
+    if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+
+    rafIdRef.current = requestAnimationFrame(() => {
+      if (cardRef.current) {
+        cardRef.current.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(0)`;
+        cardRef.current.style.transition = 'transform 0.1s ease-out';
+      }
+      if (glareRef.current) {
+        glareRef.current.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 255, 255, 0.35) 0%, transparent 65%)`;
+        glareRef.current.style.opacity = '1';
+      }
+    });
   }, [maxTilt]);
 
   const handleMouseLeave = useCallback(() => {
-    setTilt({ x: 0, y: 0, glareX: 50, glareY: 50 });
+    if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+
+    rafIdRef.current = requestAnimationFrame(() => {
+      if (cardRef.current) {
+        cardRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+        cardRef.current.style.transition = 'transform 0.4s ease-out';
+      }
+      if (glareRef.current) {
+        glareRef.current.style.opacity = '0';
+      }
+    });
   }, []);
 
   return {
-    tilt,
-    tiltStyle: {
-      transform: `perspective(1000px) rotateX(${tilt.x.toFixed(2)}deg) rotateY(${tilt.y.toFixed(2)}deg)`,
-      transition: tilt.x === 0 && tilt.y === 0 ? 'transform 0.5s ease' : 'transform 0.1s ease-out'
-    },
-    glareStyle: {
-      background: `radial-gradient(circle at ${tilt.glareX}% ${tilt.glareY}%, rgba(255, 255, 255, 0.4) 0%, transparent 60%)`
-    },
+    cardRef,
+    glareRef,
     handleMouseMove,
     handleMouseLeave
   };

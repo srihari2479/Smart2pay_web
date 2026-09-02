@@ -126,16 +126,17 @@ export default function SmartCard3D({ scrollProgress = 0, mouse = { x: 0, y: 0, 
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
+    const m = mouse?.current || mouse || { x: 0, y: 0, isHovered: false };
 
     // Smooth card tilt influenced by direct local mouse hover
     if (cardGroupRef.current) {
-      const tiltSensitivityX = mouse.isHovered ? 0.55 : 0.15;
-      const tiltSensitivityY = mouse.isHovered ? 0.65 : 0.15;
+      const tiltSensitivityX = m.isHovered ? 0.55 : 0.15;
+      const tiltSensitivityY = m.isHovered ? 0.65 : 0.15;
 
-      const targetRotX = (mouse.y * tiltSensitivityX) + Math.sin(time * 0.9) * 0.05 + (scrollProgress * Math.PI * 0.35);
-      const targetRotY = (mouse.x * tiltSensitivityY) + Math.cos(time * 0.8) * 0.08 - (scrollProgress * Math.PI * 0.55);
-      const targetPosY = (mouse.isHovered ? 0.08 : 0) + (Math.sin(time * 1.2) * 0.08) - (scrollProgress * 2.0);
-      const targetScale = mouse.isHovered ? 1.05 : 1.0;
+      const targetRotX = (m.y * tiltSensitivityX) + Math.sin(time * 0.9) * 0.05 + (scrollProgress * Math.PI * 0.35);
+      const targetRotY = (m.x * tiltSensitivityY) + Math.cos(time * 0.8) * 0.08 - (scrollProgress * Math.PI * 0.55);
+      const targetPosY = (m.isHovered ? 0.08 : 0) + (Math.sin(time * 1.2) * 0.08) - (scrollProgress * 2.0);
+      const targetScale = m.isHovered ? 1.05 : 1.0;
 
       cardGroupRef.current.rotation.x = THREE.MathUtils.lerp(cardGroupRef.current.rotation.x, targetRotX, 0.12);
       cardGroupRef.current.rotation.y = THREE.MathUtils.lerp(cardGroupRef.current.rotation.y, targetRotY, 0.12);
@@ -145,17 +146,17 @@ export default function SmartCard3D({ scrollProgress = 0, mouse = { x: 0, y: 0, 
 
     // Dynamic rotation of the glowing orbital rings
     if (outerRingRef.current) {
-      outerRingRef.current.rotation.z = time * (mouse.isHovered ? 0.6 : 0.35);
-      outerRingRef.current.rotation.x = (Math.PI / 3.2) + (mouse.y * 0.2) + Math.sin(time * 0.6) * 0.04;
+      outerRingRef.current.rotation.z = time * (m.isHovered ? 0.6 : 0.35);
+      outerRingRef.current.rotation.x = (Math.PI / 3.2) + (m.y * 0.2) + Math.sin(time * 0.6) * 0.04;
     }
 
     if (innerRingRef.current) {
-      innerRingRef.current.rotation.z = -time * (mouse.isHovered ? 0.5 : 0.25);
-      innerRingRef.current.rotation.y = (mouse.x * 0.2) + Math.cos(time * 0.5) * 0.06;
+      innerRingRef.current.rotation.z = -time * (m.isHovered ? 0.5 : 0.25);
+      innerRingRef.current.rotation.y = (m.x * 0.2) + Math.cos(time * 0.5) * 0.06;
     }
 
     if (beaconsRef.current) {
-      beaconsRef.current.rotation.z = time * (mouse.isHovered ? 0.6 : 0.35);
+      beaconsRef.current.rotation.z = time * (m.isHovered ? 0.6 : 0.35);
     }
   });
 

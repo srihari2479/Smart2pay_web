@@ -46,7 +46,7 @@ export default function Modal({
       <div
         role="dialog"
         aria-modal="true"
-        className={`relative w-full ${maxWidth} bg-[#F0F4F8] border border-white/80 rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_-15px_rgba(4,38,86,0.35)] z-10 my-8 transition-all transform scale-100`}
+        className={`relative w-full ${maxWidth} bg-[#F0F4F8] border border-white/80 rounded-3xl p-6 sm:p-8 shadow-[0_12px_36px_-8px_rgba(4,38,86,0.18)] z-10 my-8 transition-all transform scale-100`}
       >
         {/* Header */}
         <div className="flex items-start justify-between mb-6 pb-4 border-b border-[#E2E8F0]">
@@ -65,7 +65,7 @@ export default function Modal({
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="w-10 h-10 rounded-full bg-white/80 border border-white flex items-center justify-center text-[#64748B] hover:text-[#0F172A] hover:bg-white shadow-[2px_2px_6px_rgba(163,177,198,0.4)] transition-all cursor-pointer"
+            className="w-10 h-10 rounded-full bg-white/80 border border-white flex items-center justify-center text-[#64748B] hover:text-[#0F172A] hover:bg-white shadow-[1px_2px_4px_rgba(163,177,198,0.2)] transition-all cursor-pointer"
           >
             <X size={20} />
           </button>

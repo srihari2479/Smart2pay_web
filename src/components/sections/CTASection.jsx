@@ -31,7 +31,7 @@ export default function CTASection({ onOpenDemoModal }) {
       <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-6xl">
         
         {/* Extruded Hero Banner Card */}
-        <div className="relative rounded-3xl bg-gradient-to-br from-[#021838] via-[#052E66] to-[#0A3A80] text-white p-8 sm:p-12 lg:p-14 shadow-[0_25px_60px_-15px_rgba(4,38,86,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] border border-white/25 overflow-hidden">
+        <div className="relative rounded-3xl bg-gradient-to-br from-[#021838] via-[#052E66] to-[#0A3A80] text-white p-8 sm:p-12 lg:p-14 shadow-[0_12px_36px_-8px_rgba(4,38,86,0.22)] border border-white/25 overflow-hidden">
           
           {/* Ambient Lighting Flares */}
           <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#1856F3]/35 rounded-full blur-3xl pointer-events-none" />
@@ -47,7 +47,7 @@ export default function CTASection({ onOpenDemoModal }) {
               
               {/* Top Kicker Pill */}
               <div className="mb-4">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#38BDF8] text-xs font-black border border-white/20 backdrop-blur-md shadow-sm">
+                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#38BDF8] text-xs font-black border border-white/20 backdrop-blur-md shadow-xs">
                   <Sparkles size={14} className="text-[#38BDF8]" /> Instant Activation Available
                 </span>
               </div>
@@ -70,7 +70,7 @@ export default function CTASection({ onOpenDemoModal }) {
               <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
                 <button
                   onClick={handleTriggerConfetti}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-r from-[#1856F3] to-[#0284C7] hover:from-[#0D45D6] hover:to-[#0369A1] text-white font-black text-base shadow-[0_10px_30px_rgba(24,86,243,0.55),inset_0_1px_1px_rgba(255,255,255,0.4)] hover:shadow-[0_14px_36px_rgba(24,86,243,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/30 cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-r from-[#1856F3] to-[#0284C7] hover:from-[#0D45D6] hover:to-[#0369A1] text-white font-black text-base shadow-[0_4px_16px_rgba(24,86,243,0.22)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/30 cursor-pointer"
                 >
                   <span>Create Merchant Account</span>
                   <ArrowRight size={18} />
@@ -78,7 +78,7 @@ export default function CTASection({ onOpenDemoModal }) {
 
                 <a
                   href="tel:+918886317755"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm sm:text-base border border-white/20 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm sm:text-base border border-white/20 backdrop-blur-md shadow-xs hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <div className="w-7 h-7 rounded-lg bg-white/15 flex items-center justify-center text-[#38BDF8]">
                     <Headphones size={15} />
@@ -104,10 +104,10 @@ export default function CTASection({ onOpenDemoModal }) {
             {/* Right Column: Skeuomorphic App Showcase Card */}
             <div className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center">
               
-              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] text-[#0F172A] p-6 sm:p-7 rounded-3xl border border-white shadow-[0_20px_50px_rgba(0,0,0,0.45),inset_0_1px_1px_rgba(255,255,255,1)] w-full max-w-sm flex flex-col items-center text-center relative group">
+              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] text-[#0F172A] p-6 sm:p-7 rounded-3xl border border-white shadow-[0_6px_20px_rgba(0,0,0,0.12)] w-full max-w-sm flex flex-col items-center text-center relative group">
                 
                 {/* 3D App Icon Monogram Tile */}
-                <div className="w-18 h-18 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-3 mx-auto mb-3 shadow-[0_8px_20px_rgba(4,38,86,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)] border border-white/40 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
+                <div className="w-18 h-18 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-3 mx-auto mb-3 shadow-[0_4px_12px_rgba(4,38,86,0.18)] border border-white/40 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
                   <img
                     src={getAssetUrl('assets/logo/smart2pay_monogram.png')}
                     alt="Smart2Pay"
@@ -137,7 +137,7 @@ export default function CTASection({ onOpenDemoModal }) {
                     href="https://play.google.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full flex items-center justify-center gap-3.5 py-3 px-6 rounded-full bg-[#042656] hover:bg-[#07387A] text-white font-bold text-xs shadow-[0_6px_18px_rgba(4,38,86,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)] hover:shadow-[0_8px_24px_rgba(4,38,86,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/20 cursor-pointer"
+                    className="w-full flex items-center justify-center gap-3.5 py-3 px-6 rounded-full bg-[#042656] hover:bg-[#07387A] text-white font-bold text-xs shadow-[0_2px_8px_rgba(4,38,86,0.18)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/20 cursor-pointer"
                   >
                     <img
                       src={getAssetUrl('assets/icons/playstore_logo.png')}
@@ -159,7 +159,7 @@ export default function CTASection({ onOpenDemoModal }) {
                     href="https://apple.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full flex items-center justify-center gap-3.5 py-3 px-6 rounded-full bg-[#042656] hover:bg-[#07387A] text-white font-bold text-xs shadow-[0_6px_18px_rgba(4,38,86,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)] hover:shadow-[0_8px_24px_rgba(4,38,86,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/20 cursor-pointer"
+                    className="w-full flex items-center justify-center gap-3.5 py-3 px-6 rounded-full bg-[#042656] hover:bg-[#07387A] text-white font-bold text-xs shadow-[0_2px_8px_rgba(4,38,86,0.18)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/20 cursor-pointer"
                   >
                     <svg className="w-5 h-5 fill-current text-white shrink-0" viewBox="0 0 24 24">
                       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.86c.62-.75 1.04-1.8 0.92-2.86-.9.04-2 .6-2.65 1.36-.58.66-1.09 1.74-.96 2.76 1.02.08 2.07-.51 2.69-1.26z"/>

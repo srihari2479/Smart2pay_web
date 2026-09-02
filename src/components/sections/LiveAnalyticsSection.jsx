@@ -118,14 +118,14 @@ export default function LiveAnalyticsSection() {
         />
 
         {/* Real-Time Ledger Console Card */}
-        <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-6 sm:p-8 rounded-3xl border border-white shadow-[0_20px_50px_rgba(163,177,198,0.45),inset_0_1px_1px_rgba(255,255,255,1)]">
+        <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-6 sm:p-8 rounded-3xl border border-white shadow-[0_10px_30px_rgba(163,177,198,0.2),inset_0_1px_1px_rgba(255,255,255,1)]">
           
           {/* Dashboard Header Bar with Official Smart2Pay Logo */}
           <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#E2E8F0] mb-8">
             
             {/* Left: Official Smart2Pay Logo & Title */}
             <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-2 flex items-center justify-center shadow-md border border-white/40 shrink-0">
+              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-2 flex items-center justify-center shadow-sm border border-white/40 shrink-0">
                 <img
                   src={getAssetUrl('assets/logo/smart2pay_monogram.png')}
                   alt="Smart2Pay"
@@ -151,7 +151,7 @@ export default function LiveAnalyticsSection() {
             </div>
 
             {/* Right: Interactive Timeframe Selector Pills */}
-            <div className="flex items-center gap-1.5 bg-white/90 p-1.5 rounded-2xl border border-white shadow-[2px_2px_6px_rgba(163,177,198,0.25),-2px_-2px_4px_rgba(255,255,255,0.9)]">
+            <div className="flex items-center gap-1.5 bg-white/90 p-1.5 rounded-2xl border border-white shadow-[1px_1px_4px_rgba(163,177,198,0.15)]">
               {['Live (1h)', 'Today', '7 Days', '30 Days'].map((tab) => {
                 const isActive = activeRange === tab;
                 return (
@@ -160,7 +160,7 @@ export default function LiveAnalyticsSection() {
                     onClick={() => setActiveRange(tab)}
                     className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? 'bg-[#042656] text-white shadow-[0_4px_12px_rgba(4,38,86,0.35)] scale-105'
+                        ? 'bg-[#042656] text-white shadow-[0_2px_8px_rgba(4,38,86,0.2)] scale-105'
                         : 'text-[#64748B] hover:text-[#042656] hover:bg-[#F1F5F9]'
                     }`}
                   >
@@ -176,7 +176,7 @@ export default function LiveAnalyticsSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 mb-8">
             
             {/* Stat 1: Volume */}
-            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[4px_4px_12px_rgba(163,177,198,0.3),-4px_-4px_10px_rgba(255,255,255,0.95)] hover:-translate-y-0.5 transition-all">
+            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 transition-all">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.12em]">
                   Settled Gross Volume
@@ -193,7 +193,7 @@ export default function LiveAnalyticsSection() {
             </div>
 
             {/* Stat 2: Multi-Bank Route Success */}
-            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[4px_4px_12px_rgba(163,177,198,0.3),-4px_-4px_10px_rgba(255,255,255,0.95)] hover:-translate-y-0.5 transition-all">
+            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 transition-all">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.12em]">
                   Multi-Bank Route Success
@@ -209,7 +209,7 @@ export default function LiveAnalyticsSection() {
             </div>
 
             {/* Stat 3: Average Latency */}
-            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[4px_4px_12px_rgba(163,177,198,0.3),-4px_-4px_10px_rgba(255,255,255,0.95)] hover:-translate-y-0.5 transition-all">
+            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 transition-all">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.12em]">
                   Average Settlement Latency

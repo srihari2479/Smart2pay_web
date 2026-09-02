@@ -33,16 +33,17 @@ export default function SecurityShield3D({ scrollProgress = 0, mouse = { x: 0, y
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
+    const m = mouse?.current || mouse || { x: 0, y: 0, isHovered: false };
 
     // 1. Direct Front-Facing Default with Interactive Mouse Hover Tilt
     if (vaultGroupRef.current) {
-      const tiltSensitivityX = mouse.isHovered ? 0.45 : 0;
-      const tiltSensitivityY = mouse.isHovered ? 0.55 : 0;
+      const tiltSensitivityX = m.isHovered ? 0.45 : 0;
+      const tiltSensitivityY = m.isHovered ? 0.55 : 0;
 
-      const targetRotX = (mouse.isHovered ? mouse.y * tiltSensitivityX : Math.sin(time * 0.8) * 0.025);
-      const targetRotY = (mouse.x * tiltSensitivityY) ? mouse.x * tiltSensitivityY : Math.cos(time * 0.6) * 0.025;
-      const targetPosY = (mouse.isHovered ? 0.06 : 0) + (Math.sin(time * 1.2) * 0.04);
-      const targetScale = mouse.isHovered ? 1.04 : 1.0;
+      const targetRotX = (m.isHovered ? m.y * tiltSensitivityX : Math.sin(time * 0.8) * 0.025);
+      const targetRotY = (m.x * tiltSensitivityY) ? m.x * tiltSensitivityY : Math.cos(time * 0.6) * 0.025;
+      const targetPosY = (m.isHovered ? 0.06 : 0) + (Math.sin(time * 1.2) * 0.04);
+      const targetScale = m.isHovered ? 1.04 : 1.0;
 
       vaultGroupRef.current.rotation.x = THREE.MathUtils.lerp(vaultGroupRef.current.rotation.x, targetRotX, 0.1);
       vaultGroupRef.current.rotation.y = THREE.MathUtils.lerp(vaultGroupRef.current.rotation.y, targetRotY, 0.1);
@@ -52,13 +53,13 @@ export default function SecurityShield3D({ scrollProgress = 0, mouse = { x: 0, y
 
     // 2. Dual Rotating Orbital Defense Rings
     if (outerRingRef.current) {
-      outerRingRef.current.rotation.z = time * (mouse.isHovered ? 0.6 : 0.35);
-      outerRingRef.current.rotation.x = (Math.PI / 3.2) + (mouse.y * 0.12);
+      outerRingRef.current.rotation.z = time * (m.isHovered ? 0.6 : 0.35);
+      outerRingRef.current.rotation.x = (Math.PI / 3.2) + (m.y * 0.12);
     }
 
     if (innerRingRef.current) {
-      innerRingRef.current.rotation.z = -time * (mouse.isHovered ? 0.5 : 0.25);
-      innerRingRef.current.rotation.y = (mouse.x * 0.12);
+      innerRingRef.current.rotation.z = -time * (m.isHovered ? 0.5 : 0.25);
+      innerRingRef.current.rotation.y = (m.x * 0.12);
     }
 
     // 3. Subtle floating breathing for central gold lock

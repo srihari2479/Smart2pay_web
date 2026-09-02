@@ -77,7 +77,7 @@ export default function SecuritySection() {
           <div className="lg:col-span-6 relative flex flex-col items-center justify-center">
             
             {/* Floating Top Security Status Pill */}
-            <div className="flex items-center justify-between w-full max-w-md px-4 py-2.5 rounded-full bg-white/90 backdrop-blur-md border border-white shadow-[2px_2px_8px_rgba(163,177,198,0.3),-2px_-2px_6px_rgba(255,255,255,0.9)] mb-2">
+            <div className="flex items-center justify-between w-full max-w-md px-4 py-2.5 rounded-full bg-white/90 backdrop-blur-md border border-white shadow-[1px_2px_6px_rgba(163,177,198,0.15)] mb-2">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-ping" />
                 <span className="text-xs font-mono uppercase tracking-wider text-[#059669] font-black">
@@ -94,8 +94,8 @@ export default function SecuritySection() {
               <ThreeCanvas scene="security" height="h-[400px] sm:h-[460px]" />
             </div>
 
-            {/* Floating Skeuoneumorphic Security Compliance Badge */}
-            <div className="w-full max-w-md mt-2 px-5 py-3 rounded-2xl bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] border border-white shadow-[6px_6px_18px_rgba(163,177,198,0.35),-6px_-6px_14px_rgba(255,255,255,0.95)] flex items-center justify-between">
+            {/* Floating Security Compliance Badge */}
+            <div className="w-full max-w-md mt-2 px-5 py-3 rounded-2xl bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] border border-white shadow-[3px_4px_12px_rgba(163,177,198,0.18),-3px_-4px_10px_rgba(255,255,255,0.9)] flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-emerald-100 flex items-center justify-center text-[#10B981] shadow-inner">
                   <ShieldCheck size={18} />
@@ -138,13 +138,13 @@ export default function SecuritySection() {
 
         </div>
 
-        {/* Compliance & Standards Verification Grid (Skeuomorphic + Neumorphic) */}
+        {/* Compliance & Standards Verification Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
           
           {/* Tile 1: PCI-DSS */}
-          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[5px_5px_14px_rgba(163,177,198,0.35),-5px_-5px_12px_rgba(255,255,255,0.95),inset_0_1px_1px_rgba(255,255,255,1)] hover:-translate-y-1 hover:shadow-[7px_7px_18px_rgba(163,177,198,0.45),-5px_-5px_14px_rgba(255,255,255,1)] transition-all duration-200 flex flex-col justify-between group">
+          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-1 hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] transition-all duration-200 flex flex-col justify-between group">
             <div className="flex items-center justify-between">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[2px_2px_5px_rgba(163,177,198,0.4),-2px_-2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center text-[#10B981]">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#10B981]">
                 <ShieldCheck size={18} />
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#059669] bg-[#D1FAE5] px-2.5 py-0.5 rounded-full border border-emerald-200/60 shadow-sm">
@@ -160,9 +160,9 @@ export default function SecuritySection() {
           </div>
 
           {/* Tile 2: AES-256 */}
-          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[5px_5px_14px_rgba(163,177,198,0.35),-5px_-5px_12px_rgba(255,255,255,0.95),inset_0_1px_1px_rgba(255,255,255,1)] hover:-translate-y-1 hover:shadow-[7px_7px_18px_rgba(163,177,198,0.45),-5px_-5px_14px_rgba(255,255,255,1)] transition-all duration-200 flex flex-col justify-between group">
+          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-1 hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] transition-all duration-200 flex flex-col justify-between group">
             <div className="flex items-center justify-between">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[2px_2px_5px_rgba(163,177,198,0.4),-2px_-2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center text-[#1856F3]">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#1856F3]">
                 <Lock size={18} />
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#1856F3] bg-[#EBF1FF] px-2.5 py-0.5 rounded-full border border-blue-200/60 shadow-sm">
@@ -178,9 +178,9 @@ export default function SecuritySection() {
           </div>
 
           {/* Tile 3: ISO/IEC 27001 */}
-          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[5px_5px_14px_rgba(163,177,198,0.35),-5px_-5px_12px_rgba(255,255,255,0.95),inset_0_1px_1px_rgba(255,255,255,1)] hover:-translate-y-1 hover:shadow-[7px_7px_18px_rgba(163,177,198,0.45),-5px_-5px_14px_rgba(255,255,255,1)] transition-all duration-200 flex flex-col justify-between group">
+          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-1 hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] transition-all duration-200 flex flex-col justify-between group">
             <div className="flex items-center justify-between">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[2px_2px_5px_rgba(163,177,198,0.4),-2px_-2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center text-[#8B5CF6]">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#8B5CF6]">
                 <FileCheck size={18} />
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#7C3AED] bg-[#F3E8FF] px-2.5 py-0.5 rounded-full border border-purple-200/60 shadow-sm">
@@ -196,9 +196,9 @@ export default function SecuritySection() {
           </div>
 
           {/* Tile 4: DPDP 2023 */}
-          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[5px_5px_14px_rgba(163,177,198,0.35),-5px_-5px_12px_rgba(255,255,255,0.95),inset_0_1px_1px_rgba(255,255,255,1)] hover:-translate-y-1 hover:shadow-[7px_7px_18px_rgba(163,177,198,0.45),-5px_-5px_14px_rgba(255,255,255,1)] transition-all duration-200 flex flex-col justify-between group">
+          <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white/95 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-1 hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] transition-all duration-200 flex flex-col justify-between group">
             <div className="flex items-center justify-between">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[2px_2px_5px_rgba(163,177,198,0.4),-2px_-2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center text-[#F59E0B]">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#F59E0B]">
                 <KeyRound size={18} />
               </div>
               <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#D97706] bg-[#FEF3C7] px-2.5 py-0.5 rounded-full border border-amber-200/60 shadow-sm">

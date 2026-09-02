@@ -14,17 +14,27 @@ import {
 } from 'lucide-react';
 import BrandLogo from '../common/BrandLogo';
 
+import { useLenisSmoothScroll } from '../../hooks/useLenisSmoothScroll';
+
 export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { scrollTo } = useLenisSmoothScroll();
 
   const isHome = location.pathname === '/';
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 15);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 15);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -33,10 +43,7 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
   const handleNavClick = (sectionId) => {
     setMobileMenuOpen(false);
     if (isHome) {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollTo(`#${sectionId}`);
     } else {
       navigate(`/#${sectionId}`);
     }
@@ -46,8 +53,8 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 h-20 flex items-center transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#EEF2F6]/95 backdrop-blur-xl border-b border-[#CBD5E1]/80 shadow-[0_8px_25px_rgba(163,177,198,0.3)]'
-          : 'bg-[#EEF2F6]/90 backdrop-blur-lg border-b border-[#D8E1EA] shadow-[0_4px_16px_rgba(163,177,198,0.15)]'
+          ? 'bg-[#EEF2F6]/95 backdrop-blur-xl border-b border-[#CBD5E1]/80 shadow-[0_4px_16px_rgba(163,177,198,0.15)]'
+          : 'bg-[#EEF2F6]/90 backdrop-blur-lg border-b border-[#D8E1EA] shadow-[0_2px_8px_rgba(163,177,198,0.08)]'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">

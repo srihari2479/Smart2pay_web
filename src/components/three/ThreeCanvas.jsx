@@ -1,6 +1,6 @@
-import React, { Suspense, useState, useEffect, useRef } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { ContactShadows, Environment, Float } from '@react-three/drei';
+import { ContactShadows } from '@react-three/drei';
 import SmartCard3D from './SmartCard3D';
 import PaymentEcosystem3D from './PaymentEcosystem3D';
 import SecurityShield3D from './SecurityShield3D';
@@ -43,7 +43,7 @@ export default function ThreeCanvas({
   const containerRef = useRef(null);
   const { progress } = useScrollProgress();
   const prefersReducedMotion = usePrefersReducedMotion();
-  const [mouse, setMouse] = useState({ x: 0, y: 0, isHovered: false });
+  const mouseRef = useRef({ x: 0, y: 0, isHovered: false });
 
   const handleMouseMove = (e) => {
     if (prefersReducedMotion || !containerRef.current) return;
@@ -51,15 +51,15 @@ export default function ThreeCanvas({
     // Calculate normalized coordinates (-1 to 1) relative to the local canvas box
     const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
     const y = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
-    setMouse({
+    mouseRef.current = {
       x: Math.max(-1.5, Math.min(1.5, x)),
       y: Math.max(-1.5, Math.min(1.5, y)),
       isHovered: true
-    });
+    };
   };
 
   const handleMouseLeave = () => {
-    setMouse({ x: 0, y: 0, isHovered: false });
+    mouseRef.current = { x: 0, y: 0, isHovered: false };
   };
 
   return (
@@ -81,13 +81,13 @@ export default function ThreeCanvas({
           <ambientLight intensity={1.2} />
           <directionalLight
             position={[5, 8, 5]}
-            intensity={1.5}
+            intensity={1.4}
             castShadow
             shadow-mapSize={[1024, 1024]}
             shadow-bias={-0.0001}
           />
-          <directionalLight position={[-5, -2, -2]} intensity={0.5} color="#1856F3" />
-          <pointLight position={[0, 3, 2]} intensity={0.8} color="#F59E0B" />
+          <directionalLight position={[-5, -2, -2]} intensity={0.4} color="#1856F3" />
+          <pointLight position={[0, 3, 2]} intensity={0.6} color="#F59E0B" />
 
           <Suspense fallback={null}>
             {/* Background floating geometric tokens */}
@@ -95,23 +95,23 @@ export default function ThreeCanvas({
 
             {/* Main Scene Render based on prop */}
             {scene === 'hero-card' && (
-              <SmartCard3D scrollProgress={progress} mouse={mouse} />
+              <SmartCard3D scrollProgress={progress} mouse={mouseRef} />
             )}
 
             {scene === 'ecosystem' && (
-              <PaymentEcosystem3D scrollProgress={progress} activeStep={activeStep} mouse={mouse} />
+              <PaymentEcosystem3D scrollProgress={progress} activeStep={activeStep} mouse={mouseRef} />
             )}
 
             {scene === 'security' && (
-              <SecurityShield3D scrollProgress={progress} mouse={mouse} />
+              <SecurityShield3D scrollProgress={progress} mouse={mouseRef} />
             )}
 
             {/* Soft Contact Ground Shadows */}
             <ContactShadows
               position={[0, -2.4, 0]}
-              opacity={0.35}
+              opacity={0.16}
               scale={10}
-              blur={2.2}
+              blur={2.5}
               far={4}
             />
           </Suspense>

@@ -35,13 +35,13 @@ export default function BankEcosystemTicker() {
         </div>
       </div>
 
-      {/* Primary Bank Logos Ticker Track (Enlarged & High Contrast) */}
+      {/* Primary Bank Logos Ticker Track */}
       <div className="relative w-full overflow-hidden flex py-3">
         <div className="animate-ticker flex items-center gap-8 sm:gap-10 px-6">
           {[...bankList, ...bankList].map((bank, i) => (
             <div
               key={`bank-${i}`}
-              className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl sm:rounded-3xl bg-white border border-white shadow-[4px_4px_14px_rgba(163,177,198,0.32),-3px_-3px_10px_rgba(255,255,255,0.95)] shrink-0 hover:shadow-[6px_6px_18px_rgba(24,86,243,0.2)] transition-all hover:scale-105 duration-200"
+              className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl sm:rounded-3xl bg-white border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.16),-2px_-3px_8px_rgba(255,255,255,0.9)] shrink-0 hover:shadow-[4px_6px_14px_rgba(24,86,243,0.15)] transition-all hover:scale-105 duration-200"
             >
               <img
                 src={getAssetUrl(`assets/banklogos/${bank.file}`)}
@@ -59,13 +59,13 @@ export default function BankEcosystemTicker() {
         </div>
       </div>
 
-      {/* Gateway & Network Rails Ticker Track (Reverse Direction, Enlarged) */}
+      {/* Gateway & Network Rails Ticker Track */}
       <div className="relative w-full overflow-hidden flex pt-4 pb-2">
         <div className="animate-ticker-reverse flex items-center gap-8 sm:gap-10 px-6">
           {[...gatewayPartners, ...gatewayPartners].map((partner, i) => (
             <div
               key={`gateway-${i}`}
-              className="flex items-center gap-3.5 px-6 py-3 rounded-2xl sm:rounded-3xl bg-white/90 border border-white shadow-[3px_3px_10px_rgba(163,177,198,0.25),-2px_-2px_8px_rgba(255,255,255,0.95)] shrink-0 hover:bg-white hover:shadow-[5px_5px_15px_rgba(16,185,129,0.2)] transition-all hover:scale-105 duration-200"
+              className="flex items-center gap-3.5 px-6 py-3 rounded-2xl sm:rounded-3xl bg-white/90 border border-white shadow-[2px_2px_6px_rgba(163,177,198,0.14),-2px_-2px_6px_rgba(255,255,255,0.9)] shrink-0 hover:bg-white hover:shadow-[3px_4px_10px_rgba(16,185,129,0.15)] transition-all hover:scale-105 duration-200"
             >
               <img
                 src={getAssetUrl(`assets/cards/${partner.file}`)}

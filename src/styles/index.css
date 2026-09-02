@@ -71,6 +71,27 @@
   }
 }
 
+/* Lenis Smooth Scroll Core Rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* Tactile Neumorphic & Skeuomorphic Utility Classes */
 
 .neu-raised-sm {
@@ -90,7 +111,7 @@
 }
 
 .neu-raised:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-raised-lg);
 }
 
@@ -126,7 +147,7 @@
 }
 
 .neu-card-interactive:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-raised-xl);
   border-color: rgba(24, 86, 243, 0.25);
   background: var(--bg-card-hover);
@@ -138,7 +159,7 @@
   font-weight: 600;
   padding: 12px 26px;
   border-radius: var(--radius-pill);
-  box-shadow: var(--glow-blue), 0 4px 10px rgba(4, 38, 86, 0.2);
+  box-shadow: var(--glow-blue), 0 2px 6px rgba(4, 38, 86, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all var(--transition-normal);
   display: inline-flex;
@@ -149,7 +170,7 @@
 
 .neu-button-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--glow-blue-strong), 0 8px 18px rgba(4, 38, 86, 0.25);
+  box-shadow: var(--glow-blue-strong), 0 4px 12px rgba(4, 38, 86, 0.15);
 }
 
 .neu-button-primary:active {

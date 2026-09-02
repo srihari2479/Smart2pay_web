@@ -6,31 +6,31 @@ import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
 import DeleteAccount from './pages/DeleteAccount';
 import NotFound from './pages/NotFound';
+import { useLenisSmoothScroll } from './hooks/useLenisSmoothScroll';
 
 /**
  * Helper component that resets window scroll position on route change
  */
-function ScrollToTop() {
+function ScrollToTop({ scrollTo }) {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
+      scrollTo(`#${hash.replace('#', '')}`);
+    } else {
+      window.scrollTo(0, 0);
     }
-    window.scrollTo(0, 0);
-  }, [pathname, hash]);
+  }, [pathname, hash, scrollTo]);
 
   return null;
 }
 
 export default function App() {
+  const { scrollTo } = useLenisSmoothScroll();
+
   return (
     <>
-      <ScrollToTop />
+      <ScrollToTop scrollTo={scrollTo} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/terms" element={<Terms />} />
