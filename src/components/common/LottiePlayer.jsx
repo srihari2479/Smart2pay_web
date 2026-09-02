@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 /**
  * Reusable Lottie Player that loads JSON animation files dynamically with fallback
@@ -26,7 +27,7 @@ export default function LottiePlayer({
 
     if (src) {
       setLoading(true);
-      fetch(src)
+      fetch(getAssetUrl(src))
         .then((res) => {
           if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
           return res.json();

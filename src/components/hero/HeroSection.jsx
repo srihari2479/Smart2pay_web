@@ -16,6 +16,7 @@ import Badge from '../common/Badge';
 import Card from '../common/Card';
 import ThreeCanvas from '../three/ThreeCanvas';
 import LottiePlayer from '../common/LottiePlayer';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 export default function HeroSection({ onOpenDemoModal }) {
   const [liveVolume, setLiveVolume] = useState(8429150);
@@ -198,11 +199,11 @@ export default function HeroSection({ onOpenDemoModal }) {
 
             {/* Supported Card Networks Ribbon */}
             <div className="mt-5 flex items-center justify-center gap-4 flex-wrap opacity-85 hover:opacity-100 transition-opacity">
-              <img src="/assets/cc_logos/VISA_cc.png" alt="Visa" className="h-5 object-contain" />
-              <img src="/assets/cc_logos/master_cc.png" alt="Mastercard" className="h-5 object-contain" />
-              <img src="/assets/cc_logos/rupay_cc.png" alt="RuPay" className="h-5 object-contain" />
-              <img src="/assets/cc_logos/AMEX_CC.png" alt="Amex" className="h-5 object-contain" />
-              <img src="/assets/cc_logos/Dinersclub_cc.png" alt="Diners Club" className="h-5 object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/VISA_cc.png')} alt="Visa" className="h-5 object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/master_cc.png')} alt="Mastercard" className="h-5 object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/rupay_cc.png')} alt="RuPay" className="h-5 object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/AMEX_CC.png')} alt="Amex" className="h-5 object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/Dinersclub_cc.png')} alt="Diners Club" className="h-5 object-contain" />
             </div>
 
           </div>

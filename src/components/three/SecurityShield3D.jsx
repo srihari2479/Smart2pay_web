@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { RoundedBox, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 /**
  * Photorealistic 3D Titanium Cryptographic Security Vault
@@ -16,7 +17,7 @@ export default function SecurityShield3D({ scrollProgress = 0, mouse = { x: 0, y
   const padlockRef = useRef();
 
   // Load vector security vault face artwork
-  const vaultTexture = useTexture('/assets/cards/security_vault_face.svg');
+  const vaultTexture = useTexture(getAssetUrl('assets/cards/security_vault_face.svg'));
   if (vaultTexture) {
     vaultTexture.minFilter = THREE.LinearFilter;
     vaultTexture.magFilter = THREE.LinearFilter;
@@ -24,7 +25,7 @@ export default function SecurityShield3D({ scrollProgress = 0, mouse = { x: 0, y
   }
 
   // Load official Smart2Pay monogram logo
-  const monogramTexture = useTexture('/assets/logo/smart2pay_monogram.png');
+  const monogramTexture = useTexture(getAssetUrl('assets/logo/smart2pay_monogram.png'));
   if (monogramTexture) {
     monogramTexture.minFilter = THREE.LinearFilter;
     monogramTexture.magFilter = THREE.LinearFilter;

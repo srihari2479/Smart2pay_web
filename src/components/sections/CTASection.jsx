@@ -14,6 +14,7 @@ import {
 import confetti from 'canvas-confetti';
 import Button from '../common/Button';
 import Badge from '../common/Badge';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 export default function CTASection({ onOpenDemoModal }) {
   const handleTriggerConfetti = () => {
@@ -108,7 +109,7 @@ export default function CTASection({ onOpenDemoModal }) {
                 {/* 3D App Icon Monogram Tile */}
                 <div className="w-18 h-18 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-3 mx-auto mb-3 shadow-[0_8px_20px_rgba(4,38,86,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)] border border-white/40 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
                   <img
-                    src="/assets/logo/smart2pay_monogram.png"
+                    src={getAssetUrl('assets/logo/smart2pay_monogram.png')}
                     alt="Smart2Pay"
                     className="w-full h-full object-contain"
                   />
@@ -139,7 +140,7 @@ export default function CTASection({ onOpenDemoModal }) {
                     className="w-full flex items-center justify-center gap-3.5 py-3 px-6 rounded-full bg-[#042656] hover:bg-[#07387A] text-white font-bold text-xs shadow-[0_6px_18px_rgba(4,38,86,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)] hover:shadow-[0_8px_24px_rgba(4,38,86,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/20 cursor-pointer"
                   >
                     <img
-                      src="/assets/icons/playstore_logo.png"
+                      src={getAssetUrl('assets/icons/playstore_logo.png')}
                       alt="Google Play"
                       className="w-5 h-5 object-contain shrink-0"
                     />

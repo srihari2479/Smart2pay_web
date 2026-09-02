@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 /**
  * Official Smart2Pay Monogram Logo & Brand Wordmark
@@ -12,7 +13,7 @@ export default function BrandLogo({ size = 42, className = '', showText = true, 
         style={{ width: size, height: size }}
       >
         <img
-          src="/assets/logo/smart2pay_monogram.png"
+          src={getAssetUrl('assets/logo/smart2pay_monogram.png')}
           alt="Smart2Pay Monogram"
           className="w-full h-full object-contain"
         />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Building2, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 import Badge from '../common/Badge';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 export default function BankEcosystemTicker() {
   const bankList = [
@@ -43,7 +44,7 @@ export default function BankEcosystemTicker() {
               className="flex items-center gap-3.5 px-6 py-3.5 rounded-2xl sm:rounded-3xl bg-white border border-white shadow-[4px_4px_14px_rgba(163,177,198,0.32),-3px_-3px_10px_rgba(255,255,255,0.95)] shrink-0 hover:shadow-[6px_6px_18px_rgba(24,86,243,0.2)] transition-all hover:scale-105 duration-200"
             >
               <img
-                src={`/assets/banklogos/${bank.file}`}
+                src={getAssetUrl(`assets/banklogos/${bank.file}`)}
                 alt={bank.name}
                 className="h-8 sm:h-9 w-auto max-w-[130px] object-contain transition-all"
                 onError={(e) => {
@@ -67,7 +68,7 @@ export default function BankEcosystemTicker() {
               className="flex items-center gap-3.5 px-6 py-3 rounded-2xl sm:rounded-3xl bg-white/90 border border-white shadow-[3px_3px_10px_rgba(163,177,198,0.25),-2px_-2px_8px_rgba(255,255,255,0.95)] shrink-0 hover:bg-white hover:shadow-[5px_5px_15px_rgba(16,185,129,0.2)] transition-all hover:scale-105 duration-200"
             >
               <img
-                src={`/assets/cards/${partner.file}`}
+                src={getAssetUrl(`assets/cards/${partner.file}`)}
                 alt={partner.name}
                 className="h-7 sm:h-8 w-auto max-w-[110px] object-contain"
                 onError={(e) => {

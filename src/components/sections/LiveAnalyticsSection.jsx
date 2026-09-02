@@ -15,6 +15,7 @@ import {
 import SectionHeader from '../common/SectionHeader';
 import Card from '../common/Card';
 import Badge from '../common/Badge';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 export default function LiveAnalyticsSection() {
   const [activeRange, setActiveRange] = useState('Live (1h)');
@@ -126,7 +127,7 @@ export default function LiveAnalyticsSection() {
             <div className="flex items-center gap-3.5">
               <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-2 flex items-center justify-center shadow-md border border-white/40 shrink-0">
                 <img
-                  src="/assets/logo/smart2pay_monogram.png"
+                  src={getAssetUrl('assets/logo/smart2pay_monogram.png')}
                   alt="Smart2Pay"
                   className="w-full h-full object-contain"
                 />

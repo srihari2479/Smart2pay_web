@@ -2,6 +2,7 @@ import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { RoundedBox, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 /**
  * Animated Network Badge Component
@@ -13,11 +14,11 @@ function AnimatedNetworkBadge() {
 
   // Load all 5 official payment network badge PNG assets
   const [rupayTex, masterTex, amexTex, dinersTex, visaTex] = useTexture([
-    '/assets/cc_logos/rupay_cc.png',
-    '/assets/cc_logos/master_cc.png',
-    '/assets/cc_logos/AMEX_CC.png',
-    '/assets/cc_logos/Dinersclub_cc.png',
-    '/assets/cc_logos/VISA_cc.png'
+    getAssetUrl('assets/cc_logos/rupay_cc.png'),
+    getAssetUrl('assets/cc_logos/master_cc.png'),
+    getAssetUrl('assets/cc_logos/AMEX_CC.png'),
+    getAssetUrl('assets/cc_logos/Dinersclub_cc.png'),
+    getAssetUrl('assets/cc_logos/VISA_cc.png')
   ]);
 
   // Texture filtering for razor-sharp rendering
@@ -110,14 +111,14 @@ export default function SmartCard3D({ scrollProgress = 0, mouse = { x: 0, y: 0, 
   const beaconsRef = useRef();
 
   // Load official Smart2Pay monogram texture (from smart2pay.png)
-  const monogramTexture = useTexture('/assets/logo/smart2pay_monogram.png');
+  const monogramTexture = useTexture(getAssetUrl('assets/logo/smart2pay_monogram.png'));
   if (monogramTexture) {
     monogramTexture.minFilter = THREE.LinearFilter;
     monogramTexture.magFilter = THREE.LinearFilter;
   }
 
   // Load vector card face artwork
-  const cardFaceTexture = useTexture('/assets/cards/smart2pay_card_face.svg');
+  const cardFaceTexture = useTexture(getAssetUrl('assets/cards/smart2pay_card_face.svg'));
   if (cardFaceTexture) {
     cardFaceTexture.minFilter = THREE.LinearFilter;
     cardFaceTexture.magFilter = THREE.LinearFilter;
