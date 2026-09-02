@@ -75,7 +75,7 @@ export default function FeatureMatrix({ onOpenDemoModal }) {
   ];
 
   return (
-    <section id="features" className="py-10 lg:py-14 relative bg-[#F0F4F8] border-b border-[#D8E1EA]/60 overflow-hidden">
+    <section id="features" className="pt-6 pb-10 lg:pt-8 lg:pb-12 relative bg-[#F0F4F8] border-b border-[#D8E1EA]/60 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header */}
