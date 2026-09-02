@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <!-- 1. Background Radial Vault Gradient -->
+    <radialGradient id="vaultBaseGlow" cx="50%" cy="46%" r="65%">
+      <stop offset="0%" stop-color="#0B2B5C" />
+      <stop offset="35%" stop-color="#061A3B" />
+      <stop offset="70%" stop-color="#020B1A" />
+      <stop offset="100%" stop-color="#01050D" />
+    </radialGradient>
+
+    <!-- 2. Atmospheric Rim Glow -->
+    <radialGradient id="rimAtmosphere" cx="85%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#1856F3" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- 3. Metallic Border Gradient -->
+    <linearGradient id="cyberBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="25%" stop-color="#10B981" />
+      <stop offset="50%" stop-color="#1856F3" />
+      <stop offset="75%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <!-- 4. Glowing Ribbon Gradients -->
+    <linearGradient id="cyanRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.65" />
+      <stop offset="50%" stop-color="#1856F3" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="emeraldRibbon" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#1856F3" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- 5. Laser Glow Filter -->
+    <filter id="laserGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Titanium Vault Slab -->
+  <rect width="800" height="800" rx="140" fill="url(#vaultBaseGlow)" />
+  <rect width="800" height="800" rx="140" fill="url(#rimAtmosphere)" />
+
+  <!-- Outer Cybernetic Border (Clean Nested Concentric Rounded Frames) -->
+  <rect x="25" y="25" width="750" height="750" rx="125" fill="none" stroke="url(#cyberBorder)" stroke-width="3" stroke-dasharray="24 12" stroke-opacity="0.85" />
+  <rect x="38" y="38" width="724" height="724" rx="112" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.35" />
+  <rect x="50" y="50" width="700" height="700" rx="100" fill="none" stroke="#10B981" stroke-width="1" stroke-dasharray="10 10" stroke-opacity="0.25" />
+
+  <!-- Flowing Harmonic Security Wave Ribbons (Smooth Luxury Curves) -->
+  <g opacity="0.65" filter="url(#laserGlow)">
+    <path d="M 0 540 C 220 460, 360 620, 800 480 L 800 620 C 480 720, 240 580, 0 680 Z" fill="url(#cyanRibbon)" />
+    <path d="M 0 460 C 260 380, 420 540, 800 400 L 800 520 C 440 640, 200 500, 0 600 Z" fill="url(#emeraldRibbon)" />
+    <path d="M 0 620 C 300 520, 520 700, 800 580 L 800 800 L 0 800 Z" fill="#041836" fill-opacity="0.5" />
+  </g>
+
+  <!-- Concentric Biometric Radar Rings (Aligned with Center 400, 380) -->
+  <circle cx="400" cy="380" r="310" fill="none" stroke="#1856F3" stroke-width="1.5" stroke-opacity="0.25" />
+  <circle cx="400" cy="380" r="250" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="14 10" stroke-opacity="0.35" />
+  <circle cx="400" cy="380" r="190" fill="none" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.55" filter="url(#laserGlow)" />
+  <circle cx="400" cy="380" r="135" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="8 6" stroke-opacity="0.7" />
+
+  <!-- Hexagonal Cryptographic Defense Shield Matrix -->
+  <polygon points="400,150 600,265 600,495 400,610 200,495 200,265" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-opacity="0.45" filter="url(#laserGlow)" />
+  <polygon points="400,185 570,282 570,478 400,575 230,478 230,282" fill="#041E42" fill-opacity="0.5" stroke="#10B981" stroke-width="2" stroke-opacity="0.6" />
+
+  <!-- Cardinal Crosshair Lines (Clean and Constrained inside Inner Border) -->
+  <line x1="120" y1="380" x2="680" y2="380" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.2" stroke-dasharray="8 8" />
+  <line x1="400" y1="120" x2="400" y2="640" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.2" stroke-dasharray="8 8" />
+
+  <!-- Center Biometric Aperture Halo Target (Framing 3D Brass Lock) -->
+  <circle cx="400" cy="380" r="85" fill="#020B1A" fill-opacity="0.95" stroke="#38BDF8" stroke-width="3" filter="url(#laserGlow)" />
+  <circle cx="400" cy="380" r="105" fill="none" stroke="#10B981" stroke-width="2" stroke-dasharray="12 8" stroke-opacity="0.85" />
+  <circle cx="400" cy="380" r="60" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- Top Header Telemetry -->
+  <g transform="translate(400, 95)">
+    <rect x="-140" y="-16" width="280" height="32" rx="16" fill="#041836" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.6" />
+    <text x="0" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" fill="#38BDF8" text-anchor="middle" letter-spacing="4">HARDWARE CRYPTO SHIELD</text>
+  </g>
+
+  <!-- Bottom Institutional Security Telemetry Labels -->
+  <g transform="translate(400, 685)">
+    <rect x="-180" y="-18" width="360" height="54" rx="20" fill="#031229" fill-opacity="0.92" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.5" />
+    <text x="0" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="900" fill="#38BDF8" text-anchor="middle" letter-spacing="6">AES-256 HSM VAULT</text>
+    <text x="0" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#10B981" text-anchor="middle" letter-spacing="3">ZERO-KNOWLEDGE • PCI-DSS L1</text>
+  </g>
+</svg>

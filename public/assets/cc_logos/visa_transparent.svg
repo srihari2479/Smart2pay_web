@@ -1,0 +1,8 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Visa Classic Wordmark with Gold Wing -->
+  <text x="200" y="135" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="110" font-weight="900" font-style="italic" fill="#FFFFFF" letter-spacing="4">
+    VISA
+  </text>
+  <!-- Gold Top-Left Accent Wing on 'V' -->
+  <path d="M72 52 L115 52 L95 90 Z" fill="#F59E0B"/>
+</svg>

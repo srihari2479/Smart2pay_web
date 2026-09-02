@@ -1,0 +1,13 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Diners Club Split Ellipse / Emblem -->
+  <g transform="translate(130, 30)">
+    <!-- Outer Cyan Ring -->
+    <circle cx="70" cy="70" r="65" stroke="#38BDF8" stroke-width="8" fill="none"/>
+    <!-- Left Segment -->
+    <path d="M70 20 A 50 50 0 0 0 70 120 Z" fill="#0079BE"/>
+    <!-- Right Segment -->
+    <path d="M70 20 A 50 50 0 0 1 70 120 Z" fill="#FFFFFF"/>
+    <!-- Center Dividing Gap -->
+    <line x1="70" y1="12" x2="70" y2="128" stroke="#030814" stroke-width="10"/>
+  </g>
+</svg>

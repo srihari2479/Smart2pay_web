@@ -1,0 +1,11 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Amex Blue Box -->
+  <rect x="50" y="20" width="300" height="160" rx="16" fill="#006FCF"/>
+  <!-- American Express Wordmark -->
+  <text x="200" y="88" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" letter-spacing="2">
+    AMERICAN
+  </text>
+  <text x="200" y="132" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" letter-spacing="2">
+    EXPRESS
+  </text>
+</svg>

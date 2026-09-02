@@ -38,11 +38,16 @@ smart2pay_base64.txt
 *.tmp
 *.temp
 
-# Root loose duplicates (already structured inside public/assets/)
-animations/
-banklogos/
-cards/
-cc_logos/
-icons/
-ic_launcher-playstore.png
-smart2pay.png
+# Root loose duplicate directories only (leading slash ensures subdirectories like public/assets/ are NOT ignored)
+/animations/
+/banklogos/
+/cards/
+/cc_logos/
+/icons/
+/ic_launcher-playstore.png
+/smart2pay.png
+
+# Explicitly ensure all public assets are tracked
+!public/
+!public/assets/
+!public/assets/**

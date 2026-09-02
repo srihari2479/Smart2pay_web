@@ -1,0 +1,10 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- RuPay Text in Crisp White -->
+  <text x="30" y="135" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="95" font-weight="900" font-style="italic" fill="#FFFFFF" letter-spacing="-2">
+    RuPay
+  </text>
+  <!-- RuPay Orange Arrow -->
+  <path d="M305 45 L345 105 L305 165 Z" fill="#F97316"/>
+  <!-- RuPay Cyan/Green Arrow -->
+  <path d="M335 45 L375 105 L335 165 Z" fill="#10B981"/>
+</svg>

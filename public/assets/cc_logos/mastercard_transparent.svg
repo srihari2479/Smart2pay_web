@@ -1,0 +1,20 @@
+<svg width="400" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Overlap blend area -->
+    <linearGradient id="mcOverlap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EB001B"/>
+      <stop offset="50%" stop-color="#FF5F00"/>
+      <stop offset="100%" stop-color="#F79E1B"/>
+    </linearGradient>
+  </defs>
+  <!-- Left Red Circle -->
+  <circle cx="155" cy="100" r="70" fill="#EB001B"/>
+  <!-- Right Gold Circle -->
+  <circle cx="245" cy="100" r="70" fill="#F79E1B"/>
+  <!-- Intersecting Lens -->
+  <path d="M200 45 C222 60, 235 80, 235 100 C235 120, 222 140, 200 155 C178 140, 165 120, 165 100 C165 80, 178 60, 200 45 Z" fill="#FF5F00"/>
+  <!-- Mastercard Wordmark in Crisp White -->
+  <text x="200" y="210" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF" letter-spacing="1">
+    mastercard
+  </text>
+</svg>
