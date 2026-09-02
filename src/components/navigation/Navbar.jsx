@@ -10,11 +10,13 @@ import {
   Zap,
   Lock,
   User,
-  ExternalLink
+  ExternalLink,
+  Home as HomeIcon
 } from 'lucide-react';
 import BrandLogo from '../common/BrandLogo';
 
 import { useLenisSmoothScroll } from '../../hooks/useLenisSmoothScroll';
+import { useScrollProgress } from '../../hooks/useScrollProgress';
 
 export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,6 +24,7 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { scrollTo } = useLenisSmoothScroll();
+  const { activeSection } = useScrollProgress();
 
   const isHome = location.pathname === '/';
 
@@ -42,6 +45,15 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
 
   const handleNavClick = (sectionId) => {
     setMobileMenuOpen(false);
+    if (sectionId === 'hero') {
+      if (isHome) {
+        window.scrollTo(0, 0);
+        scrollTo(0);
+      } else {
+        navigate('/');
+      }
+      return;
+    }
     if (isHome) {
       scrollTo(`#${sectionId}`);
     } else {
@@ -78,29 +90,56 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
           className="hidden lg:flex items-center gap-1 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#D5DEE7] shadow-[0_2px_10px_rgba(163,177,198,0.25)] shrink-0"
         >
           <button
+            onClick={() => handleNavClick('hero')}
+            className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition-all whitespace-nowrap cursor-pointer ${
+              activeSection === 'hero' && isHome
+                ? 'text-[#1856F3] bg-[#EEF4FF]'
+                : 'text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF]'
+            }`}
+          >
+            Home
+          </button>
+
+          <button
             onClick={() => handleNavClick('ecosystem')}
-            className="px-3.5 py-1.5 rounded-full text-[13px] font-bold text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF] transition-all whitespace-nowrap cursor-pointer"
+            className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition-all whitespace-nowrap cursor-pointer ${
+              activeSection === 'ecosystem' && isHome
+                ? 'text-[#1856F3] bg-[#EEF4FF]'
+                : 'text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF]'
+            }`}
           >
             Ecosystem
           </button>
           
           <button
             onClick={() => handleNavClick('features')}
-            className="px-3.5 py-1.5 rounded-full text-[13px] font-bold text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF] transition-all whitespace-nowrap cursor-pointer"
+            className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition-all whitespace-nowrap cursor-pointer ${
+              activeSection === 'features' && isHome
+                ? 'text-[#1856F3] bg-[#EEF4FF]'
+                : 'text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF]'
+            }`}
           >
             Features
           </button>
 
           <button
             onClick={() => handleNavClick('utility')}
-            className="px-3.5 py-1.5 rounded-full text-[13px] font-bold text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF] transition-all whitespace-nowrap cursor-pointer"
+            className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition-all whitespace-nowrap cursor-pointer ${
+              activeSection === 'utility' && isHome
+                ? 'text-[#1856F3] bg-[#EEF4FF]'
+                : 'text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF]'
+            }`}
           >
             Services
           </button>
 
           <button
             onClick={() => handleNavClick('security')}
-            className="px-3.5 py-1.5 rounded-full text-[13px] font-bold text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF] transition-all whitespace-nowrap cursor-pointer flex items-center gap-1.5"
+            className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition-all whitespace-nowrap cursor-pointer flex items-center gap-1.5 ${
+              activeSection === 'security' && isHome
+                ? 'text-[#1856F3] bg-[#EEF4FF]'
+                : 'text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF]'
+            }`}
           >
             <ShieldCheck size={14} className="text-[#10B981]" />
             <span>Security</span>
@@ -108,7 +147,11 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
 
           <button
             onClick={() => handleNavClick('calculator')}
-            className="px-3.5 py-1.5 rounded-full text-[13px] font-bold text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF] transition-all whitespace-nowrap cursor-pointer"
+            className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition-all whitespace-nowrap cursor-pointer ${
+              activeSection === 'calculator' && isHome
+                ? 'text-[#1856F3] bg-[#EEF4FF]'
+                : 'text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF]'
+            }`}
           >
             Fee Estimator
           </button>
@@ -158,6 +201,14 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-x-0 top-20 bg-[#EEF2F6]/98 backdrop-blur-xl border-b border-[#CBD5E1] shadow-2xl p-6 transition-all animate-fadeIn">
           <div className="flex flex-col gap-2.5">
+            <button
+              onClick={() => handleNavClick('hero')}
+              className="flex items-center justify-between p-3.5 rounded-2xl bg-white font-bold text-[#0F172A] shadow-sm text-left hover:text-[#1856F3] transition-colors"
+            >
+              <span>Home</span>
+              <HomeIcon size={18} className="text-[#1856F3]" />
+            </button>
+
             <button
               onClick={() => handleNavClick('ecosystem')}
               className="flex items-center justify-between p-3.5 rounded-2xl bg-white font-bold text-[#0F172A] shadow-sm text-left hover:text-[#1856F3] transition-colors"
