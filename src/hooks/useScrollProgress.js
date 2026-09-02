@@ -21,17 +21,30 @@ export function useScrollProgress() {
           setScrollY(currentScrollY);
           setProgress((prev) => Math.abs(prev - currentProgress) > 0.001 ? currentProgress : prev);
 
-          // Detect active section based on scroll offset
+          // Force 'hero' section when near top of page
+          if (currentScrollY < 180) {
+            setActiveSection('hero');
+            ticking = false;
+            return;
+          }
+
+          // Detect active section based on viewport intersection
           const sections = ['hero', 'ecosystem', 'features', 'utility', 'security', 'calculator', 'analytics', 'how-it-works', 'cta'];
+          const viewportMid = window.innerHeight * 0.35;
+
+          let matched = null;
           for (const sectionId of sections) {
             const el = document.getElementById(sectionId);
             if (el) {
               const rect = el.getBoundingClientRect();
-              if (rect.top <= 250 && rect.bottom >= 200) {
-                setActiveSection((prev) => prev !== sectionId ? sectionId : prev);
+              if (rect.top <= viewportMid && rect.bottom >= 120) {
+                matched = sectionId;
                 break;
               }
             }
+          }
+          if (matched) {
+            setActiveSection((prev) => prev !== matched ? matched : prev);
           }
           ticking = false;
         });

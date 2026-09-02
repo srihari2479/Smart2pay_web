@@ -47,15 +47,21 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
     setMobileMenuOpen(false);
     if (sectionId === 'hero') {
       if (isHome) {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         scrollTo(0);
       } else {
         navigate('/');
       }
       return;
     }
+
     if (isHome) {
-      scrollTo(`#${sectionId}`);
+      const el = document.getElementById(sectionId);
+      if (el) {
+        scrollTo(el, { offset: -90 });
+      } else {
+        scrollTo(`#${sectionId}`);
+      }
     } else {
       navigate('/', { state: { targetSection: sectionId } });
     }
