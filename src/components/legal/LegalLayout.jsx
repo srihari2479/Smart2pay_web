@@ -34,11 +34,11 @@ export default function LegalLayout({ title, lastUpdated, children }) {
     <div className="min-h-screen bg-[#EEF2F6] flex flex-col justify-between">
       <Navbar />
 
-      <main className="pt-32 pb-24 flex-1">
-        <div className="container mx-auto px-4 sm:px-6">
+      <main className="pt-24 pb-14 flex-1">
+        <div className="w-full px-5 max-w-[1720px] mx-auto">
           
           {/* Breadcrumb / Back Link */}
-          <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#CBD5E1]/60">
+          <div className="flex items-center justify-between mb-5 pb-3 border-b border-[#CBD5E1]/60">
             <Link
               to="/"
               className="inline-flex items-center gap-2 text-sm font-bold text-[#1856F3] hover:text-[#042656] transition-colors"
@@ -56,10 +56,10 @@ export default function LegalLayout({ title, lastUpdated, children }) {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             
-            {/* Left Column: Official HappyPay Legal Sidebar Navigation */}
-            <aside className="lg:col-span-4 sticky top-28">
+            {/* Left Column: Official Smart2Pay Legal Sidebar Navigation */}
+            <aside className="lg:col-span-3 xl:col-span-3 sticky top-24">
               <div className="neu-raised-lg p-6 bg-white border border-white/90">
                 
                 {/* Header */}
@@ -119,7 +119,7 @@ export default function LegalLayout({ title, lastUpdated, children }) {
             </aside>
 
             {/* Right Column: Legal Document Content */}
-            <article className="lg:col-span-8 neu-raised-lg p-8 sm:p-12 bg-white border border-white/90">
+            <article className="lg:col-span-9 xl:col-span-9 neu-raised-lg p-6 sm:p-10 lg:p-12 bg-white border border-white/90">
               
               {/* Document Header */}
               <div className="pb-8 mb-8 border-b border-[#E2E8F0]">

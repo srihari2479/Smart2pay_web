@@ -19,6 +19,19 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* High-Contrast Selection for Effortless Text Copying & Visibility */
+  ::selection {
+    background-color: #1856F3 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+  ::-moz-selection {
+    background-color: #1856F3 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
   section[id] {
     scroll-margin-top: 96px;
   }
