@@ -56,11 +56,11 @@ export default function Refund() {
         <h2 className="text-xl font-bold text-[#0F172A]">6. Refund & Grievance Support</h2>
         <p className="text-sm">
           For refund queries, please provide your Transaction ID (e.g. S2P-XXXXXX), date, and amount:<br />
-          <strong>Buddica Global Solutions Pvt Ltd</strong> (Operating Smart2Pay B2B White Label Platform)<br />
-          Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA - 531019<br />
-          Email: <a href="mailto:support@smart2pay.biz" className="text-[#1856F3] font-bold underline">support@smart2pay.biz</a><br />
-          Phone: <a href="tel:+918886327755" className="text-[#1856F3] font-bold underline">+91 8886327755</a><br />
-          WhatsApp: <a href="https://wa.me/919884548289" target="_blank" rel="noreferrer" className="text-[#1856F3] underline">+91 9884548289</a> | Telegram: <a href="https://t.me/buddica" target="_blank" rel="noreferrer" className="text-[#1856F3] underline">t.me/buddica</a><br />
+          <strong>SMART2PAY</strong> (B2B White Label Fintech Solution • Powered by Buddica Global Solutions Pvt Ltd)<br />
+          NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082<br />
+          Email: <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] font-bold underline">smart2payment@gmail.com</a><br />
+          Phone: <a href="tel:+919750585861" className="text-[#1856F3] font-bold underline">+91 9750585861</a><br />
+          WhatsApp: <a href="https://wa.me/918838607449" target="_blank" rel="noreferrer" className="text-[#1856F3] underline font-bold">+91 8838607449</a><br />
           Website: <a href="https://smart2pay.co.in" className="text-[#1856F3] underline">https://smart2pay.co.in</a>
         </p>
       </section>

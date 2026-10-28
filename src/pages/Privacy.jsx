@@ -62,14 +62,12 @@ export default function Privacy() {
       </section>
 
       <section className="space-y-4 pt-4 border-t border-[#E2E8F0]">
-        <h2 className="text-xl font-bold text-[#0F172A]">6. Data Protection Officer (DPO) & Grievance Contact</h2>
+        <h2 className="text-xl font-bold text-[#0F172A]">6. Data Protection Officer (DPO) & Contact</h2>
         <p className="text-sm">
-          <strong>Grievance & Privacy Desk — Buddica Global Solutions Pvt Ltd</strong><br />
-          Operating Smart2Pay (B2B White Label Fintech Platform)<br />
-          Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA.<br />
-          Registered Office: Revenue Ward No 26, No. 26-30-19, Yerukuvanipalem, Ramalayam Street, Visakhapatnam, Paravada Industrial Area, Anakapalli, AP – 531019<br />
-          Email: <a href="mailto:support@smart2pay.biz" className="text-[#1856F3] underline">support@smart2pay.biz</a> | Phone: <a href="tel:+918886327755" className="text-[#1856F3] underline">+91 8886327755</a><br />
-          WhatsApp: <a href="https://wa.me/919884548289" target="_blank" rel="noreferrer" className="text-[#1856F3] underline">+91 9884548289</a> | Telegram: <a href="https://t.me/buddica" target="_blank" rel="noreferrer" className="text-[#1856F3] underline">t.me/buddica</a><br />
+          <strong>SMART2PAY</strong> (B2B White Label Fintech Solution • Powered by Buddica Global Solutions Pvt Ltd)<br />
+          NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082<br />
+          Email: <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] underline font-bold">smart2payment@gmail.com</a> | Phone: <a href="tel:+919750585861" className="text-[#1856F3] underline font-bold">+91 9750585861</a><br />
+          WhatsApp: <a href="https://wa.me/918838607449" target="_blank" rel="noreferrer" className="text-[#1856F3] underline font-bold">+91 8838607449</a><br />
           Official Website: <a href="https://smart2pay.co.in" className="text-[#1856F3] underline">https://smart2pay.co.in</a>
         </p>
       </section>

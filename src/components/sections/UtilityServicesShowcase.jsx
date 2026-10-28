@@ -15,7 +15,14 @@ import {
 } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 import Button from '../common/Button';
-import LottiePlayer from '../common/LottiePlayer';
+import LottiePlayer, { preloadLottie } from '../common/LottiePlayer';
+import { getAssetUrl } from '../../utils/assetHelper';
+
+// Preload top utility animations for instantaneous display
+try {
+  preloadLottie('/assets/animations/Business.json');
+  preloadLottie('/assets/animations/Learning Data.json');
+} catch (e) {}
 
 /**
  * Stacked Layered Cards Showcase
@@ -179,6 +186,20 @@ export default function UtilityServicesShowcase({ onOpenDemoModal }) {
                       <span className="w-8 h-8 rounded-full bg-[#042656] text-white font-mono text-xs font-bold flex items-center justify-center shadow-xs">
                         {service.num}
                       </span>
+
+                      {/* Official Service Category Icon */}
+                      <div className="w-8 h-8 rounded-xl bg-white p-1 border border-[#CBD5E1] shadow-xs flex items-center justify-center overflow-hidden shrink-0">
+                        <img
+                          src={getAssetUrl(`assets/icons/${service.iconFile}`)}
+                          alt={service.category}
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
+                      </div>
 
                       {/* Category Badge */}
                       <span className="text-xs font-black uppercase tracking-wider text-[#042656] bg-white px-3 py-1 rounded-full border border-[#CBD5E1] shadow-xs">

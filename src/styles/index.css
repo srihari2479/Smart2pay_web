@@ -12,7 +12,7 @@
     font-family: var(--font-sans);
     color: var(--text-primary);
     background-color: var(--bg-base);
-    scroll-behavior: smooth;
+    scroll-behavior: auto !important;
     scroll-padding-top: 96px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

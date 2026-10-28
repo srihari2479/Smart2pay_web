@@ -70,6 +70,17 @@ export default function PaymentFlowSection() {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
+          if (!sectionRef.current) {
+            ticking = false;
+            return;
+          }
+          const sectionRect = sectionRef.current.getBoundingClientRect();
+          // Skip when section is outside viewport to prevent layout thrashing
+          if (sectionRect.bottom < -100 || sectionRect.top > window.innerHeight + 100) {
+            ticking = false;
+            return;
+          }
+
           const viewportCenter = window.innerHeight * 0.5;
           let closestIndex = 0;
           let minDistance = Infinity;

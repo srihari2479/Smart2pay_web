@@ -1,8 +1,23 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, Suspense } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { RoundedBox, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { getAssetUrl } from '../../utils/assetHelper';
+
+// Preload card textures
+try {
+  useTexture.preload([
+    getAssetUrl('assets/cards/smart2pay_card_face.svg'),
+    getAssetUrl('assets/logo/smart2pay_monogram.png'),
+    getAssetUrl('assets/cc_logos/rupay_cc.png'),
+    getAssetUrl('assets/cc_logos/master_cc.png'),
+    getAssetUrl('assets/cc_logos/AMEX_CC.png'),
+    getAssetUrl('assets/cc_logos/Dinersclub_cc.png'),
+    getAssetUrl('assets/cc_logos/VISA_cc.png')
+  ]);
+} catch (e) {
+  // Preload graceful fallback
+}
 
 /**
  * Animated Network Badge Component
@@ -274,7 +289,9 @@ export default function SmartCard3D({ scrollProgress = 0, mouse = { x: 0, y: 0, 
         </mesh>
 
         {/* Animated Payment Network Badge with 3D Flip Rotation (Bottom-Right) */}
-        <AnimatedNetworkBadge />
+        <Suspense fallback={null}>
+          <AnimatedNetworkBadge />
+        </Suspense>
 
       </group>
     </group>

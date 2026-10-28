@@ -46,6 +46,10 @@ export default function BankEcosystemTicker() {
               <img
                 src={getAssetUrl(`assets/banklogos/${bank.file}`)}
                 alt={bank.name}
+                loading="lazy"
+                decoding="async"
+                width="120"
+                height="36"
                 className="h-8 sm:h-9 w-auto max-w-[130px] object-contain transition-all"
                 onError={(e) => {
                   e.target.style.display = 'none';
@@ -70,6 +74,10 @@ export default function BankEcosystemTicker() {
               <img
                 src={getAssetUrl(`assets/cards/${partner.file}`)}
                 alt={partner.name}
+                loading="lazy"
+                decoding="async"
+                width="110"
+                height="32"
                 className="h-7 sm:h-8 w-auto max-w-[110px] object-contain"
                 onError={(e) => {
                   e.target.style.display = 'none';

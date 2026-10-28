@@ -100,51 +100,42 @@ export default function LegalLayout({ title, lastUpdated, children }) {
                   <div className="space-y-0.5">
                     <div className="flex items-center gap-2 font-bold text-[#042656]">
                       <Building2 size={14} className="text-[#1856F3] shrink-0" />
-                      <span>Buddica Global Solutions Pvt Ltd</span>
+                      <span>SMART2PAY</span>
                     </div>
                     <span className="text-[10px] font-semibold text-[#1856F3] uppercase tracking-wider block pl-5">
-                      Smart2Pay B2B White Label
+                      White Label Solution • Buddica Global
                     </span>
                   </div>
 
                   <div className="flex items-start gap-1.5 text-[11px] text-[#64748B] leading-relaxed">
                     <MapPin size={12} className="text-[#64748B] shrink-0 mt-0.5" />
-                    <span>Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA - 531019</span>
+                    <span>NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082</span>
                   </div>
 
                   <div className="pt-2 border-t border-[#E2E8F0] space-y-1.5">
                     <div className="flex items-center gap-1.5 text-[#334155]">
                       <Mail size={12} className="text-[#1856F3] shrink-0" />
-                      <a href="mailto:support@smart2pay.biz" className="hover:underline font-medium truncate">
-                        support@smart2pay.biz
+                      <a href="mailto:smart2payment@gmail.com" className="hover:underline font-medium truncate">
+                        smart2payment@gmail.com
                       </a>
                     </div>
                     <div className="flex items-center gap-1.5 text-[#334155]">
                       <Phone size={12} className="text-[#1856F3] shrink-0" />
-                      <a href="tel:+918886327755" className="hover:underline font-medium">
-                        +91 8886327755
+                      <a href="tel:+919750585861" className="hover:underline font-medium">
+                        +91 9750585861
                       </a>
                     </div>
                   </div>
 
-                  <div className="pt-2 border-t border-[#E2E8F0] flex items-center gap-2">
+                  <div className="pt-2 border-t border-[#E2E8F0]">
                     <a 
-                      href="https://wa.me/919884548289" 
+                      href="https://wa.me/918838607449" 
                       target="_blank" 
                       rel="noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg bg-[#25D366]/10 text-[#128C7E] font-bold text-[11px] hover:bg-[#25D366]/20 transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#128C7E] font-bold text-xs transition-colors"
                     >
-                      <MessageSquare size={11} />
-                      <span>WhatsApp</span>
-                    </a>
-                    <a 
-                      href="https://t.me/buddica" 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg bg-[#0088cc]/10 text-[#0088cc] font-bold text-[11px] hover:bg-[#0088cc]/20 transition-colors"
-                    >
-                      <Send size={11} />
-                      <span>Telegram</span>
+                      <MessageSquare size={13} />
+                      <span>Chat on WhatsApp: +91 8838607449</span>
                     </a>
                   </div>
                 </div>

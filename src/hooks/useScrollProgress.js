@@ -1,62 +1,89 @@
 import { useState, useEffect } from 'react';
 
 /**
- * Throttled RAF Hook to track window scroll progress percentage (0.0 to 1.0) and current section
+ * Shared singleton scroll progress & active section tracker
+ * Eliminates 36+ redundant getBoundingClientRect queries per scroll frame.
  */
+let sharedProgress = 0;
+let sharedScrollY = 0;
+let sharedActiveSection = 'hero';
+const listeners = new Set();
+let scrollAttached = false;
+let ticking = false;
+
+const SECTIONS = ['hero', 'ecosystem', 'features', 'utility', 'security', 'calculator', 'analytics', 'how-it-works', 'cta'];
+
+function updateScrollMetrics() {
+  if (typeof window === 'undefined') return;
+  const currentScrollY = window.scrollY;
+  const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const currentProgress = totalScrollHeight > 0 ? Math.min(Math.max(currentScrollY / totalScrollHeight, 0), 1) : 0;
+
+  sharedScrollY = currentScrollY;
+  sharedProgress = currentProgress;
+
+  if (currentScrollY < 180) {
+    sharedActiveSection = 'hero';
+  } else {
+    const viewportMid = window.innerHeight * 0.35;
+    let matched = null;
+    for (const sectionId of SECTIONS) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= viewportMid && rect.bottom >= 120) {
+          matched = sectionId;
+          break;
+        }
+      }
+    }
+    if (matched) {
+      sharedActiveSection = matched;
+    }
+  }
+
+  listeners.forEach((listener) => {
+    listener({ progress: sharedProgress, scrollY: sharedScrollY, activeSection: sharedActiveSection });
+  });
+
+  ticking = false;
+}
+
+function onWindowScroll() {
+  if (!ticking) {
+    ticking = true;
+    window.requestAnimationFrame(updateScrollMetrics);
+  }
+}
+
 export function useScrollProgress() {
-  const [progress, setProgress] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [state, setState] = useState({
+    progress: sharedProgress,
+    scrollY: sharedScrollY,
+    activeSection: sharedActiveSection,
+  });
 
   useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-          const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-          const currentProgress = totalScrollHeight > 0 ? Math.min(Math.max(currentScrollY / totalScrollHeight, 0), 1) : 0;
-          
-          setScrollY(currentScrollY);
-          setProgress((prev) => Math.abs(prev - currentProgress) > 0.001 ? currentProgress : prev);
-
-          // Force 'hero' section when near top of page
-          if (currentScrollY < 180) {
-            setActiveSection('hero');
-            ticking = false;
-            return;
-          }
-
-          // Detect active section based on viewport intersection
-          const sections = ['hero', 'ecosystem', 'features', 'utility', 'security', 'calculator', 'analytics', 'how-it-works', 'cta'];
-          const viewportMid = window.innerHeight * 0.35;
-
-          let matched = null;
-          for (const sectionId of sections) {
-            const el = document.getElementById(sectionId);
-            if (el) {
-              const rect = el.getBoundingClientRect();
-              if (rect.top <= viewportMid && rect.bottom >= 120) {
-                matched = sectionId;
-                break;
-              }
-            }
-          }
-          if (matched) {
-            setActiveSection((prev) => prev !== matched ? matched : prev);
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
+    const listener = (metrics) => {
+      setState(metrics);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    listeners.add(listener);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (!scrollAttached && typeof window !== 'undefined') {
+      window.addEventListener('scroll', onWindowScroll, { passive: true });
+      scrollAttached = true;
+      updateScrollMetrics();
+    }
+
+    return () => {
+      listeners.delete(listener);
+      if (listeners.size === 0 && scrollAttached && typeof window !== 'undefined') {
+        window.removeEventListener('scroll', onWindowScroll);
+        scrollAttached = false;
+      }
+    };
   }, []);
 
-  return { progress, scrollY, activeSection };
+  return state;
 }

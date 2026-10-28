@@ -4,6 +4,16 @@ import { RoundedBox, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { getAssetUrl } from '../../utils/assetHelper';
 
+// Preload vault textures
+try {
+  useTexture.preload([
+    getAssetUrl('assets/cards/security_vault_face.svg'),
+    getAssetUrl('assets/logo/smart2pay_monogram.png')
+  ]);
+} catch (e) {
+  // Preload graceful fallback
+}
+
 /**
  * Photorealistic 3D Titanium Cryptographic Security Vault
  * Features an authentic solid brushed brass & hardened chrome padlock

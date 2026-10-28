@@ -197,11 +197,11 @@ export default function HeroSection({ onOpenDemoModal }) {
 
             {/* Supported Card Networks Ribbon */}
             <div className="mt-5 flex items-center justify-center gap-4 flex-wrap opacity-85 hover:opacity-100 transition-opacity">
-              <img src={getAssetUrl('assets/cc_logos/VISA_cc.png')} alt="Visa" className="h-5 object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/master_cc.png')} alt="Mastercard" className="h-5 object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/rupay_cc.png')} alt="RuPay" className="h-5 object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/AMEX_CC.png')} alt="Amex" className="h-5 object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/Dinersclub_cc.png')} alt="Diners Club" className="h-5 object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/VISA_cc.png')} alt="Visa" width="56" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/master_cc.png')} alt="Mastercard" width="40" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/rupay_cc.png')} alt="RuPay" width="56" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/AMEX_CC.png')} alt="Amex" width="44" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/Dinersclub_cc.png')} alt="Diners Club" width="46" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
             </div>
 
           </div>

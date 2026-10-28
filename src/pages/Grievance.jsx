@@ -27,10 +27,10 @@ export default function Grievance() {
       name: 'Customer Support Desk',
       title: 'Frontline Support Team',
       description: 'First point of contact for routine queries, failed recharges, bill payments, and general account inquiries.',
-      email: 'support@smart2pay.biz',
-      emailSecondary: 'support@happypay.live',
-      phone: '+91 8886327755',
-      phoneSecondary: '+91 8886317755',
+      email: 'smart2payment@gmail.com',
+      emailSecondary: null,
+      phone: '+91 9750585861',
+      phoneSecondary: null,
       sla: 'Ack within 2 working days',
       accent: 'border-blue-100 bg-gradient-to-b from-blue-50/40 via-white to-white',
       badgeClass: 'bg-blue-100/80 text-blue-800 border-blue-200',
@@ -294,8 +294,7 @@ export default function Grievance() {
               <span>Email Support</span>
             </div>
             <div className="text-xs text-[#475569] space-y-1 pl-9">
-              <div>Primary: <a href="mailto:support@smart2pay.biz" className="text-[#1856F3] font-bold hover:underline">support@smart2pay.biz</a></div>
-              <div>Network Desk: <a href="mailto:support@happypay.live" className="text-[#1856F3] hover:underline">support@happypay.live</a></div>
+              <div>Primary: <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] font-bold hover:underline">smart2payment@gmail.com</a></div>
             </div>
           </div>
 
@@ -307,8 +306,7 @@ export default function Grievance() {
               <span>Helpline Support</span>
             </div>
             <div className="text-xs text-[#475569] space-y-1 pl-9 font-mono">
-              <div>Primary: <a href="tel:+918886327755" className="text-[#1856F3] font-bold hover:underline">+91 8886327755</a></div>
-              <div>Support 2: <a href="tel:+918886317755" className="text-[#1856F3] hover:underline">+91 8886317755</a></div>
+              <div>Primary: <a href="tel:+919750585861" className="text-[#1856F3] font-bold hover:underline">+91 9750585861</a></div>
             </div>
           </div>
 
@@ -317,11 +315,10 @@ export default function Grievance() {
               <div className="w-7 h-7 rounded-lg bg-emerald-100 text-[#10B981] flex items-center justify-center">
                 <MessageSquare size={14} />
               </div>
-              <span>Instant Chat Channels</span>
+              <span>Instant Chat Channel</span>
             </div>
             <div className="text-xs text-[#475569] space-y-1.5 pl-9">
-              <div>WhatsApp: <a href="https://wa.me/919884548289" target="_blank" rel="noreferrer" className="text-[#10B981] font-bold hover:underline inline-flex items-center gap-1">+91 9884548289 <ExternalLink size={10} /></a></div>
-              <div>Telegram: <a href="https://t.me/buddica" target="_blank" rel="noreferrer" className="text-[#0284C7] font-bold hover:underline inline-flex items-center gap-1">t.me/buddica <ExternalLink size={10} /></a></div>
+              <div>WhatsApp: <a href="https://wa.me/918838607449" target="_blank" rel="noreferrer" className="text-[#10B981] font-bold hover:underline inline-flex items-center gap-1">+91 8838607449 <ExternalLink size={10} /></a></div>
             </div>
           </div>
 
@@ -330,11 +327,11 @@ export default function Grievance() {
               <div className="w-7 h-7 rounded-lg bg-rose-100 text-[#F43F5E] flex items-center justify-center">
                 <MapPin size={14} />
               </div>
-              <span>Registered Headquarters</span>
+              <span>Registered Operational Address</span>
             </div>
             <div className="text-xs text-[#475569] pl-9 leading-relaxed">
-              <strong>Buddica Global Solutions Private Limited</strong><br />
-              Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA – 531019.
+              <strong>SMART2PAY</strong> (Powered by Buddica Global Solutions)<br />
+              NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082.
             </div>
           </div>
         </div>
@@ -410,8 +407,8 @@ export default function Grievance() {
                   <span className="block text-xs text-[#64748B]">Frontline Support Team</span>
                 </td>
                 <td className="p-3.5">
-                  <a href="mailto:support@smart2pay.biz" className="text-[#1856F3] font-bold hover:underline block">support@smart2pay.biz</a>
-                  <span className="font-mono text-xs text-[#475569] block mt-0.5">+91 8886327755 / +91 8886317755</span>
+                  <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] font-bold hover:underline block">smart2payment@gmail.com</a>
+                  <span className="font-mono text-xs text-[#475569] block mt-0.5">+91 9750585861</span>
                 </td>
                 <td className="p-3.5 text-xs sm:text-sm leading-relaxed">
                   Initial complaint registration, transaction queries, and routine operational resolution. <strong>Ack within 2 working days.</strong>
@@ -486,7 +483,7 @@ export default function Grievance() {
           <span>FRAUD, UNAUTHORISED TRANSACTIONS AND SECURITY COMPLAINTS</span>
         </h2>
         <p className="text-sm text-[#334155] leading-relaxed">
-          If you suspect unauthorized activity on your account, notify Smart2Pay immediately at <a href="mailto:support@smart2pay.biz" className="text-[#1856F3] font-bold hover:underline">support@smart2pay.biz</a> or call our helpline <a href="tel:+918886327755" className="text-[#1856F3] font-bold hover:underline">+91 8886327755</a>. You must also notify your bank or card issuer immediately to block compromised cards or UPI handles.
+          If you suspect unauthorized activity on your account, notify Smart2Pay immediately at <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] font-bold hover:underline">smart2payment@gmail.com</a> or call our helpline <a href="tel:+919750585861" className="text-[#1856F3] font-bold hover:underline">+91 9750585861</a>. You must also notify your bank or card issuer immediately to block compromised cards or UPI handles.
         </p>
       </section>
 
@@ -563,16 +560,16 @@ export default function Grievance() {
         <div className="p-6 rounded-2xl bg-[#F0F4F8] border border-[#CBD5E1]/80 shadow-xs space-y-4">
           <div className="space-y-1">
             <h3 className="font-black text-[#042656] text-base sm:text-lg">
-              Buddica Global Solutions Private Limited
+              SMART2PAY
             </h3>
             <span className="text-xs font-bold text-[#1856F3] uppercase tracking-wider block">
-              Operating Smart2Pay (Enterprise B2B White-Label Fintech Infrastructure)
+              Enterprise B2B White-Label Fintech Infrastructure • Powered by Buddica Global Solutions
             </span>
           </div>
 
           <p className="text-xs text-[#475569] leading-relaxed">
-            <strong>Headquarters:</strong> Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA – 531019.<br />
-            <strong>Registered Office:</strong> Revenue Ward No 26, No. 26-30-19, Yerukuvanipalem, Ramalayam Street, Visakhapatnam, Paravada Industrial Area, Anakapalli, Andhra Pradesh – 531019, India
+            <strong>Operational Address:</strong> NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082.<br />
+            <strong>Parent Corporate Office:</strong> Buddica Global Solutions Private Limited, Revenue Ward No 26, No. 26-30-19, Yerukuvanipalem, Ramalayam Street, Visakhapatnam, Paravada Industrial Area, Anakapalli, Andhra Pradesh – 531019, India
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 text-xs border-t border-[#CBD5E1]/60">
@@ -590,9 +587,9 @@ export default function Grievance() {
             </div>
             <div className="p-2.5 rounded-lg bg-white border border-[#CBD5E1]/60">
               <span className="text-[#64748B] block text-[11px] font-semibold">General Customer Care</span>
-              <a href="mailto:support@smart2pay.biz" className="text-[#1856F3] font-bold hover:underline">
-                support@smart2pay.biz
-              </a> | <a href="tel:+918886327755" className="text-[#1856F3] font-bold hover:underline font-mono">+91 8886327755</a>
+              <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] font-bold hover:underline">
+                smart2payment@gmail.com
+              </a> | <a href="tel:+919750585861" className="text-[#1856F3] font-bold hover:underline font-mono">+91 9750585861</a>
             </div>
             <div className="p-2.5 rounded-lg bg-white border border-[#CBD5E1]/60">
               <span className="text-[#64748B] block text-[11px] font-semibold">Senior Escalation Desk</span>

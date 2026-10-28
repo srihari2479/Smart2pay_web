@@ -130,47 +130,36 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#38BDF8] shrink-0 mt-0.5" />
                 <p className="leading-relaxed text-white/75 text-xs sm:text-sm">
-                  <strong className="text-white block font-semibold mb-0.5">BUDDICA GLOBAL SOLUTIONS PVT LTD</strong>
-                  <span className="text-[#38BDF8] text-xs font-medium block mb-1">Operating Smart2Pay (B2B White Label Solution)</span>
-                  Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA.<br />
-                  <span className="text-[11px] text-white/60">Corp Office: Revenue Ward No 26, No. 26-30-19, Yerukuvanipalem, Ramalayam Street, Visakhapatnam, Paravada Industrial Area, Anakapalli, AP – 531019</span>
+                  <strong className="text-white block font-semibold mb-0.5">SMART2PAY</strong>
+                  <span className="text-[#38BDF8] text-xs font-medium block mb-1">B2B White Label Solution • Powered by Buddica Global Solutions</span>
+                  NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-[#38BDF8] shrink-0" />
-                <a href="tel:+918886327755" className="hover:text-white font-mono tracking-wide text-white/90">
-                  +91 8886327755
+                <a href="tel:+919750585861" className="hover:text-white font-mono tracking-wide text-white/90">
+                  +91 9750585861
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-[#38BDF8] shrink-0" />
-                <a href="mailto:support@smart2pay.biz" className="hover:text-white font-mono text-white/90">
-                  support@smart2pay.biz
+                <a href="mailto:smart2payment@gmail.com" className="hover:text-white font-mono text-white/90">
+                  smart2payment@gmail.com
                 </a>
               </div>
 
-              {/* Instant Messengers */}
+              {/* Instant Messenger */}
               <div className="flex items-center gap-3 pt-1">
                 <a 
-                  href="https://wa.me/919884548289" 
+                  href="https://wa.me/918838607449" 
                   target="_blank" 
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#4ade80] text-xs font-bold transition-all border border-[#25D366]/30"
                 >
                   <MessageSquare size={13} />
-                  <span>WhatsApp: +91 9884548289</span>
-                </a>
-
-                <a 
-                  href="https://t.me/buddica" 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#0088cc]/20 hover:bg-[#0088cc]/30 text-[#38bdf8] text-xs font-bold transition-all border border-[#0088cc]/30"
-                >
-                  <Send size={13} />
-                  <span>Telegram: @buddica</span>
+                  <span>WhatsApp: +91 8838607449</span>
                 </a>
               </div>
             </div>
