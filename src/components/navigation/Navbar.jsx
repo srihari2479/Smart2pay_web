@@ -16,7 +16,7 @@ import {
 import BrandLogo from '../common/BrandLogo';
 
 import { useLenisSmoothScroll } from '../../hooks/useLenisSmoothScroll';
-import { useScrollProgress } from '../../hooks/useScrollProgress';
+import { useScrollProgress, setActiveSectionManually } from '../../hooks/useScrollProgress';
 
 export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,6 +45,8 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
 
   const handleNavClick = (sectionId) => {
     setMobileMenuOpen(false);
+    setActiveSectionManually(sectionId, 1200);
+
     if (sectionId === 'hero') {
       if (isHome) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -58,7 +60,7 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
     if (isHome) {
       const el = document.getElementById(sectionId);
       if (el) {
-        scrollTo(el, { offset: -90 });
+        scrollTo(el, { offset: -80 });
       } else {
         scrollTo(`#${sectionId}`);
       }
@@ -70,6 +72,7 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
   const handleLogoClick = (e) => {
     if (isHome) {
       e.preventDefault();
+      setActiveSectionManually('hero', 1200);
       window.scrollTo(0, 0);
       scrollTo(0);
     }

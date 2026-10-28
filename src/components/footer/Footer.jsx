@@ -15,18 +15,19 @@ import {
 } from 'lucide-react';
 
 import BrandLogo from '../common/BrandLogo';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#042656] text-white pt-20 pb-12 overflow-hidden">
+    <footer className="relative bg-[#042656] text-white pt-10 pb-24 sm:pt-16 sm:pb-12 overflow-hidden">
       {/* Decorative ambient gradients */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1856F3]/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#10B981]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 pb-10 sm:pb-16 border-b border-white/10">
           
           {/* Brand & Corporate Overview */}
           <div className="lg:col-span-4 flex flex-col items-start">
@@ -107,9 +108,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/grievance" className="hover:text-white transition-colors flex items-center gap-1 text-emerald-300 hover:text-emerald-200">
+                <Link to="/grievance" className="hover:text-white transition-colors flex items-center gap-1">
                   <span>Grievance Redressal</span>
-                  <ArrowUpRight size={13} className="text-emerald-300/40" />
+                  <ArrowUpRight size={13} className="text-white/40" />
                 </Link>
               </li>
               <li>
@@ -138,7 +139,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-[#38BDF8] shrink-0" />
-                <a href="tel:+919750585861" className="hover:text-white font-mono tracking-wide text-white/90">
+                <a href="tel:+919750585861" className="hover:text-white font-mono text-white/90">
                   +91 9750585861
                 </a>
               </div>
@@ -150,15 +151,19 @@ export default function Footer() {
                 </a>
               </div>
 
-              {/* Instant Messenger */}
-              <div className="flex items-center gap-3 pt-1">
+              {/* WhatsApp Official Button (Matching Reference Image 2) */}
+              <div className="flex items-center gap-3 pt-2">
                 <a 
-                  href="https://wa.me/918838607449" 
+                  href="https://wa.me/918838607449?text=Hi%20Smart2Pay%20Team%2C%20I%20would%20like%20to%20know%20more%20about%20Smart2Pay%20B2B%20services" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#4ade80] text-xs font-bold transition-all border border-[#25D366]/30"
+                  className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-[#10B981] hover:border-[#34D399] bg-transparent hover:bg-[#10B981]/10 text-[#10B981] hover:text-[#34D399] text-xs sm:text-sm font-bold tracking-tight transition-all duration-200 shadow-[0_0_12px_rgba(16,185,129,0.12)] hover:shadow-[0_0_18px_rgba(16,185,129,0.28)] hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <MessageSquare size={13} />
+                  <img
+                    src={getAssetUrl('assets/icons/whatsapp_logo.png')}
+                    alt="WhatsApp"
+                    className="w-4 h-4 sm:w-5 sm:h-5 object-contain shrink-0"
+                  />
                   <span>WhatsApp: +91 8838607449</span>
                 </a>
               </div>
@@ -189,7 +194,7 @@ export default function Footer() {
             <Link to="/refund" className="hover:text-white transition-colors">
               Refund Policy
             </Link>
-            <Link to="/grievance" className="hover:text-white transition-colors text-emerald-300">
+            <Link to="/grievance" className="hover:text-white transition-colors">
               Grievance Redressal
             </Link>
           </div>

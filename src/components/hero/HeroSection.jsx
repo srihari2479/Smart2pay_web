@@ -46,7 +46,7 @@ export default function HeroSection({ onOpenDemoModal }) {
   };
 
   return (
-    <section id="hero" className="relative pt-24 pb-4 sm:pt-28 lg:pt-28 lg:pb-6 overflow-hidden">
+    <section id="hero" className="relative pt-28 pb-6 sm:pt-32 lg:pt-28 lg:pb-6 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-10 left-10 w-80 h-80 bg-[#1856F3]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-20 right-10 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-3xl pointer-events-none" />
@@ -65,7 +65,7 @@ export default function HeroSection({ onOpenDemoModal }) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0F172A] tracking-tight leading-[1.12] mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#0F172A] tracking-tight leading-[1.12] mb-5 sm:mb-6">
               High-Velocity Payments for{' '}
               <span className="gradient-text-blue block">
                 Modern Digital Commerce.
@@ -73,12 +73,12 @@ export default function HeroSection({ onOpenDemoModal }) {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-[#334155] leading-relaxed mb-8 max-w-2xl">
+            <p className="text-base sm:text-xl text-[#334155] leading-relaxed mb-6 sm:mb-8 max-w-2xl">
               Smart2Pay bridges merchants, multi-bank routing networks, and utility ecosystems with millisecond settlement speeds, institutional security, and real-time reconciliation.
             </p>
 
             {/* Primary Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto">
               <Button
                 variant="primary"
                 size="lg"
@@ -102,65 +102,65 @@ export default function HeroSection({ onOpenDemoModal }) {
             </div>
 
             {/* Live Trust & Volume Indicators (Skeuomorphic + Neumorphic) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full pt-6 border-t border-[#CBD5E1]/60">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-4 w-full pt-5 sm:pt-6 border-t border-[#CBD5E1]/60">
               
               {/* Stat 1: Live Volume (24h) */}
-              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-4 rounded-2xl border border-white/90 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] hover:-translate-y-0.5 transition-all duration-200 flex flex-col group">
+              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/90 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] hover:-translate-y-0.5 transition-all duration-200 flex flex-col group min-w-0">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] sm:text-[11px] font-extrabold text-[#64748B] uppercase tracking-[0.14em]">
+                  <span className="text-[9.5px] sm:text-[11px] font-extrabold text-[#64748B] uppercase tracking-[0.1em] sm:tracking-[0.14em] truncate">
                     Live Volume (24h)
                   </span>
-                  <div className="w-5 h-5 rounded-full bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center">
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center shrink-0">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
                   </div>
                 </div>
-                <div className="mt-2 flex items-baseline">
-                  <span className="text-lg sm:text-xl font-black font-mono text-[#042656] tracking-tight">
+                <div className="mt-1.5 sm:mt-2 flex items-baseline">
+                  <span className="text-sm sm:text-xl font-black font-mono text-[#042656] tracking-tight truncate">
                     ₹{liveVolume.toLocaleString('en-IN')}
                   </span>
                 </div>
-                <div className="flex items-center gap-1 mt-1 text-[10px] font-bold text-[#10B981]">
-                  <TrendingUp size={11} />
+                <div className="flex items-center gap-1 mt-1 text-[9.5px] sm:text-[10px] font-bold text-[#10B981]">
+                  <TrendingUp size={11} className="shrink-0" />
                   <span>+14.2% today</span>
                 </div>
               </div>
 
               {/* Stat 2: Success Rate */}
-              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-4 rounded-2xl border border-white/90 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] hover:-translate-y-0.5 transition-all duration-200 flex flex-col group">
+              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/90 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] hover:-translate-y-0.5 transition-all duration-200 flex flex-col group min-w-0">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] sm:text-[11px] font-extrabold text-[#64748B] uppercase tracking-[0.14em]">
+                  <span className="text-[9.5px] sm:text-[11px] font-extrabold text-[#64748B] uppercase tracking-[0.1em] sm:tracking-[0.14em] truncate">
                     Success Rate
                   </span>
-                  <div className="w-5 h-5 rounded-full bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#10B981]">
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#10B981] shrink-0">
                     <CheckCircle2 size={12} />
                   </div>
                 </div>
-                <div className="mt-2 flex items-baseline">
-                  <span className="text-lg sm:text-xl font-black font-mono text-[#059669] tracking-tight">
+                <div className="mt-1.5 sm:mt-2 flex items-baseline">
+                  <span className="text-sm sm:text-xl font-black font-mono text-[#059669] tracking-tight">
                     99.98%
                   </span>
                 </div>
-                <div className="flex items-center gap-1 mt-1 text-[10px] font-bold text-[#64748B]">
+                <div className="flex items-center gap-1 mt-1 text-[9.5px] sm:text-[10px] font-bold text-[#64748B]">
                   <span>Zero-drop SLA</span>
                 </div>
               </div>
 
               {/* Stat 3: Avg. Settlement */}
-              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-4 rounded-2xl border border-white/90 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] hover:-translate-y-0.5 transition-all duration-200 col-span-2 sm:col-span-1 flex flex-col group">
+              <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/90 shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[4px_6px_12px_rgba(163,177,198,0.22)] hover:-translate-y-0.5 transition-all duration-200 col-span-2 sm:col-span-1 flex flex-col group min-w-0">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] sm:text-[11px] font-extrabold text-[#64748B] uppercase tracking-[0.14em]">
+                  <span className="text-[9.5px] sm:text-[11px] font-extrabold text-[#64748B] uppercase tracking-[0.1em] sm:tracking-[0.14em] truncate">
                     Avg. Settlement
                   </span>
-                  <div className="w-5 h-5 rounded-full bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#1856F3]">
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-white to-[#E2E8F0] shadow-[1px_1px_3px_rgba(163,177,198,0.2)] flex items-center justify-center text-[#1856F3] shrink-0">
                     <Zap size={12} />
                   </div>
                 </div>
-                <div className="mt-2 flex items-baseline">
-                  <span className="text-lg sm:text-xl font-black font-mono text-[#1856F3] tracking-tight">
+                <div className="mt-1.5 sm:mt-2 flex items-baseline">
+                  <span className="text-sm sm:text-xl font-black font-mono text-[#1856F3] tracking-tight">
                     &lt; 142ms
                   </span>
                 </div>
-                <div className="flex items-center gap-1 mt-1 text-[10px] font-bold text-[#64748B]">
+                <div className="flex items-center gap-1 mt-1 text-[9.5px] sm:text-[10px] font-bold text-[#64748B]">
                   <span>Direct Bank Switch</span>
                 </div>
               </div>
@@ -169,39 +169,39 @@ export default function HeroSection({ onOpenDemoModal }) {
           </div>
 
           {/* Right Column: 3D Interactive Canvas & Tactile Live HUD Card */}
-          <div className="lg:col-span-5 relative flex flex-col items-center">
+          <div className="lg:col-span-5 relative flex flex-col items-center w-full">
             
             {/* 3D WebGL Canvas Layer */}
             <div className="relative w-full">
-              <ThreeCanvas scene="hero-card" height="h-[340px] sm:h-[380px] lg:h-[420px]" />
+              <ThreeCanvas scene="hero-card" height="h-[260px] sm:h-[380px] lg:h-[420px]" />
             </div>
 
             {/* Tactile Live Payment HUD Overlay */}
-            <div className="w-full mt-3 bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-4 rounded-2xl border border-white/95 shadow-[3px_4px_12px_rgba(163,177,198,0.18),-3px_-4px_10px_rgba(255,255,255,0.9)] flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/80 border border-emerald-200/60 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.9),2px_2px_6px_rgba(16,185,129,0.15)] flex items-center justify-center text-[#10B981] shrink-0">
-                  <Activity size={20} className="animate-pulse" />
+            <div className="w-full mt-3 bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/95 shadow-[3px_4px_12px_rgba(163,177,198,0.18),-3px_-4px_10px_rgba(255,255,255,0.9)] flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/80 border border-emerald-200/60 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.9),2px_2px_6px_rgba(16,185,129,0.15)] flex items-center justify-center text-[#10B981] shrink-0">
+                  <Activity size={18} className="animate-pulse" />
                 </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-black text-[#042656]">Smart Multi-Bank Router</span>
-                    <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="text-[11px] sm:text-xs font-black text-[#042656] truncate">Smart Multi-Bank Router</span>
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#10B981] animate-ping shrink-0" />
                   </div>
-                  <p className="text-[11px] font-medium text-[#64748B]">Zero-drop dynamic fallback active</p>
+                  <p className="text-[10px] sm:text-[11px] font-medium text-[#64748B] truncate">Zero-drop dynamic fallback active</p>
                 </div>
               </div>
-              <span className="px-3 py-1 rounded-full bg-gradient-to-b from-[#EFF6FF] to-[#DBEAFE] border border-blue-200/60 text-[#1856F3] text-[10.5px] font-black shadow-[inset_0_1px_1px_rgba(255,255,255,1),1px_1px_3px_rgba(24,86,243,0.15)] shrink-0">
+              <span className="px-2.5 sm:px-3 py-1 rounded-full bg-gradient-to-b from-[#EFF6FF] to-[#DBEAFE] border border-blue-200/60 text-[#1856F3] text-[9.5px] sm:text-[10.5px] font-black shadow-[inset_0_1px_1px_rgba(255,255,255,1),1px_1px_3px_rgba(24,86,243,0.15)] shrink-0">
                 256-Bit SSL
               </span>
             </div>
 
             {/* Supported Card Networks Ribbon */}
-            <div className="mt-5 flex items-center justify-center gap-4 flex-wrap opacity-85 hover:opacity-100 transition-opacity">
-              <img src={getAssetUrl('assets/cc_logos/VISA_cc.png')} alt="Visa" width="56" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/master_cc.png')} alt="Mastercard" width="40" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/rupay_cc.png')} alt="RuPay" width="56" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/AMEX_CC.png')} alt="Amex" width="44" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
-              <img src={getAssetUrl('assets/cc_logos/Dinersclub_cc.png')} alt="Diners Club" width="46" height="20" loading="eager" decoding="async" className="h-5 w-auto object-contain" />
+            <div className="mt-4 sm:mt-5 flex items-center justify-center gap-2.5 sm:gap-4 flex-wrap opacity-85 hover:opacity-100 transition-opacity">
+              <img src={getAssetUrl('assets/cc_logos/VISA_cc.png')} alt="Visa" width="56" height="20" loading="eager" decoding="async" className="h-4 sm:h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/master_cc.png')} alt="Mastercard" width="40" height="20" loading="eager" decoding="async" className="h-4 sm:h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/rupay_cc.png')} alt="RuPay" width="56" height="20" loading="eager" decoding="async" className="h-4 sm:h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/AMEX_CC.png')} alt="Amex" width="44" height="20" loading="eager" decoding="async" className="h-4 sm:h-5 w-auto object-contain" />
+              <img src={getAssetUrl('assets/cc_logos/Dinersclub_cc.png')} alt="Diners Club" width="46" height="20" loading="eager" decoding="async" className="h-4 sm:h-5 w-auto object-contain" />
             </div>
 
           </div>

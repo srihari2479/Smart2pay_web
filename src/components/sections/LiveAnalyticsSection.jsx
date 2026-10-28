@@ -118,14 +118,14 @@ export default function LiveAnalyticsSection() {
         />
 
         {/* Real-Time Ledger Console Card */}
-        <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-6 sm:p-8 rounded-3xl border border-white shadow-[0_10px_30px_rgba(163,177,198,0.2),inset_0_1px_1px_rgba(255,255,255,1)]">
+        <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-4 sm:p-8 rounded-2xl sm:rounded-3xl border border-white shadow-[0_10px_30px_rgba(163,177,198,0.2),inset_0_1px_1px_rgba(255,255,255,1)]">
           
           {/* Dashboard Header Bar with Official Smart2Pay Logo */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#E2E8F0] mb-8">
+          <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-[#E2E8F0] mb-5 sm:mb-8">
             
             {/* Left: Official Smart2Pay Logo & Title */}
-            <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-2 flex items-center justify-center shadow-sm border border-white/40 shrink-0">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-[#042656] to-[#0A3A80] p-2 flex items-center justify-center shadow-sm border border-white/40 shrink-0">
                 <img
                   src={getAssetUrl('assets/logo/smart2pay_monogram.png')}
                   alt="Smart2Pay"
@@ -134,33 +134,33 @@ export default function LiveAnalyticsSection() {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-base sm:text-lg font-black text-[#042656]">
+                  <h3 className="text-sm sm:text-lg font-black text-[#042656]">
                     Merchant Real-Time Ledger Console
                   </h3>
                   <span className="hidden sm:inline px-2 py-0.5 rounded-full bg-[#EBF1FF] text-[#1856F3] text-[10px] font-black border border-blue-200/60">
                     Live V4.2
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-[#10B981] mt-0.5">
-                  <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
+                <div className="flex items-center gap-1.5 sm:gap-2 text-[10.5px] sm:text-xs font-semibold text-[#10B981] mt-0.5 flex-wrap">
+                  <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping shrink-0" />
                   <span>Live Webhook Sync: 0ms lag</span>
                   <span className="text-[#94A3B8]">•</span>
-                  <span className="font-mono text-[#64748B] text-[11px]">{liveClock} UTC+05:30</span>
+                  <span className="font-mono text-[#64748B] text-[10px] sm:text-[11px]">{liveClock} UTC+05:30</span>
                 </div>
               </div>
             </div>
 
             {/* Right: Interactive Timeframe Selector Pills */}
-            <div className="flex items-center gap-1.5 bg-white/90 p-1.5 rounded-2xl border border-white shadow-[1px_1px_4px_rgba(163,177,198,0.15)]">
+            <div className="flex items-center gap-1 bg-white/90 p-1 rounded-xl border border-white shadow-[1px_1px_4px_rgba(163,177,198,0.15)] overflow-x-auto max-w-full">
               {['Live (1h)', 'Today', '7 Days', '30 Days'].map((tab) => {
                 const isActive = activeRange === tab;
                 return (
                   <button
                     key={tab}
                     onClick={() => setActiveRange(tab)}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all duration-200 cursor-pointer ${
+                    className={`px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-black transition-all duration-200 whitespace-nowrap cursor-pointer ${
                       isActive
-                        ? 'bg-[#042656] text-white shadow-[0_2px_8px_rgba(4,38,86,0.2)] scale-105'
+                        ? 'bg-[#042656] text-white shadow-xs scale-102'
                         : 'text-[#64748B] hover:text-[#042656] hover:bg-[#F1F5F9]'
                     }`}
                   >
@@ -173,62 +173,62 @@ export default function LiveAnalyticsSection() {
           </div>
 
           {/* Metric Highlights (Skeuomorphic + Neumorphic Extruded Ceramic Tiles) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mb-6 sm:mb-8">
             
             {/* Stat 1: Volume */}
-            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 transition-all">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.12em]">
+            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.15)] hover:-translate-y-0.5 transition-all">
+              <div className="flex items-center justify-between mb-1 sm:mb-2">
+                <span className="text-[10px] sm:text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.1em]">
                   Settled Gross Volume
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#1856F3] animate-pulse" />
               </div>
-              <div className="text-2xl sm:text-[28px] font-black font-mono text-[#042656] tracking-tight mb-2 animate-fadeIn">
+              <div className="text-xl sm:text-[28px] font-black font-mono text-[#042656] tracking-tight mb-1 sm:mb-2 animate-fadeIn">
                 {currentData.volumeFormatted}
               </div>
-              <div className="text-xs font-bold text-[#10B981] flex items-center gap-1">
-                <TrendingUp size={14} />
+              <div className="text-[11px] sm:text-xs font-bold text-[#10B981] flex items-center gap-1">
+                <TrendingUp size={13} />
                 <span>{currentData.volumeGrowth}</span>
               </div>
             </div>
 
             {/* Stat 2: Multi-Bank Route Success */}
-            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 transition-all">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.12em]">
+            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.15)] hover:-translate-y-0.5 transition-all">
+              <div className="flex items-center justify-between mb-1 sm:mb-2">
+                <span className="text-[10px] sm:text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.1em]">
                   Multi-Bank Route Success
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
               </div>
-              <div className="text-2xl sm:text-[28px] font-black font-mono text-[#059669] tracking-tight mb-2 animate-fadeIn">
+              <div className="text-xl sm:text-[28px] font-black font-mono text-[#059669] tracking-tight mb-1 sm:mb-2 animate-fadeIn">
                 {currentData.successRate}
               </div>
-              <span className="text-xs font-semibold text-[#64748B]">
+              <span className="text-[11px] sm:text-xs font-semibold text-[#64748B]">
                 {currentData.successSub}
               </span>
             </div>
 
             {/* Stat 3: Average Latency */}
-            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-5 rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.18),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 transition-all">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.12em]">
+            <div className="bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-white shadow-[2px_3px_8px_rgba(163,177,198,0.15)] hover:-translate-y-0.5 transition-all">
+              <div className="flex items-center justify-between mb-1 sm:mb-2">
+                <span className="text-[10px] sm:text-[10.5px] font-black text-[#64748B] uppercase tracking-[0.1em]">
                   Average Settlement Latency
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#1856F3] animate-pulse" />
               </div>
-              <div className="text-2xl sm:text-[28px] font-black font-mono text-[#1856F3] tracking-tight mb-2 animate-fadeIn">
+              <div className="text-xl sm:text-[28px] font-black font-mono text-[#1856F3] tracking-tight mb-1 sm:mb-2 animate-fadeIn">
                 {currentData.latency}
               </div>
-              <span className="text-xs font-semibold text-[#64748B]">
+              <span className="text-[11px] sm:text-xs font-semibold text-[#64748B]">
                 {currentData.latencySub}
               </span>
             </div>
 
           </div>
 
-          {/* Live Transaction Feed Table */}
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs sm:text-sm">
+          {/* Live Transaction Feed Table (Desktop: Full Table, Mobile: Compact Native Feed Cards) */}
+          <div className="hidden sm:block overflow-x-auto">
+            <table className="w-full text-left text-xs sm:text-sm min-w-[560px]">
               <thead>
                 <tr className="border-b border-[#CBD5E1]/80 text-[#64748B] text-[11px] font-black uppercase tracking-wider">
                   <th className="pb-3 px-3">TXN REF</th>
@@ -260,6 +260,37 @@ export default function LiveAnalyticsSection() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Native 320px Responsive Feed Cards */}
+          <div className="sm:hidden space-y-2.5 pb-8">
+            {currentData.transactions.map((txn) => (
+              <div 
+                key={txn.id} 
+                className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/95 border border-white shadow-xs space-y-1.5 animate-fadeIn"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs font-black text-[#042656]">{txn.id}</span>
+                  <span className="font-mono text-sm font-black text-[#042656]">{txn.amount}</span>
+                </div>
+                
+                <div className="text-xs font-bold text-[#0F172A] truncate">
+                  {txn.merchant}
+                </div>
+
+                <div className="flex items-center justify-between pt-1.5 border-t border-[#E2E8F0]/80 text-[10.5px]">
+                  <span className={`px-2 py-0.5 rounded-full font-bold border ${txn.badgeColor}`}>
+                    {txn.method}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#059669] font-bold flex items-center gap-0.5">
+                      <CheckCircle2 size={11} /> {txn.status}
+                    </span>
+                    <span className="font-mono text-[#64748B] text-[10px]">{txn.time}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>

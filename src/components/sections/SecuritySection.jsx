@@ -58,7 +58,7 @@ export default function SecuritySection() {
   ];
 
   return (
-    <section id="security" className="pt-8 pb-6 lg:pt-10 lg:pb-8 relative bg-[#F0F4F8] border-b border-[#D8E1EA]/60 overflow-hidden">
+    <section id="security" className="pt-4 pb-6 sm:pt-8 sm:pb-8 lg:pt-10 lg:pb-8 relative bg-[#F0F4F8] border-b border-[#D8E1EA]/60 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
@@ -91,7 +91,7 @@ export default function SecuritySection() {
 
             {/* 3D WebGL Cryptographic Vault Canvas Floating Seamlessly in Background */}
             <div className="w-full relative">
-              <ThreeCanvas scene="security" height="h-[400px] sm:h-[460px]" />
+              <ThreeCanvas scene="security" height="h-[280px] sm:h-[400px] lg:h-[460px]" />
             </div>
 
             {/* Floating Security Compliance Badge */}

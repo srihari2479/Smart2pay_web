@@ -125,6 +125,18 @@ export default function ThreeCanvas({
   const mouseRef = useRef({ x: 0, y: 0, isHovered: false });
   const [isInView, setIsInView] = useState(true);
   const [isSceneReady, setIsSceneReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < 768);
+      }
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Viewport Intersection Observer for 60/120fps smart frameloop
   // Canvas pauses when out of view, saving 65% GPU and eliminating scroll jank
@@ -177,12 +189,12 @@ export default function ThreeCanvas({
 
       <CanvasErrorBoundary>
         <Canvas
-          shadows
+          shadows={!isMobile}
           frameloop={isInView ? 'always' : 'never'}
-          dpr={[1, Math.min(typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1, 2)]}
-          camera={{ position: [0, 0, 5.3], fov: 48 }}
+          dpr={isMobile ? 1 : [1, Math.min(typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1, 1.75)]}
+          camera={{ position: [0, 0, isMobile ? 5.8 : 5.3], fov: isMobile ? 52 : 48 }}
           gl={{
-            antialias: true,
+            antialias: !isMobile,
             alpha: true,
             powerPreference: 'high-performance',
             stencil: false,
@@ -193,11 +205,11 @@ export default function ThreeCanvas({
           }`}
         >
           {/* Lighting Rig */}
-          <ambientLight intensity={1.2} />
+          <ambientLight intensity={isMobile ? 1.4 : 1.2} />
           <directionalLight
             position={[5, 8, 5]}
-            intensity={1.4}
-            castShadow
+            intensity={isMobile ? 1.2 : 1.4}
+            castShadow={!isMobile}
             shadow-mapSize={[512, 512]}
             shadow-bias={-0.0001}
           />
@@ -208,8 +220,8 @@ export default function ThreeCanvas({
             {/* Scene Ready Signal */}
             <ReadyNotifier onReady={() => setIsSceneReady(true)} />
 
-            {/* Background floating geometric tokens */}
-            <BackgroundParticles3D count={20} />
+            {/* Background floating geometric tokens (lightweight on mobile) */}
+            <BackgroundParticles3D count={isMobile ? 6 : 20} />
 
             {/* Main Scene Render based on prop */}
             {scene === 'hero-card' && (
@@ -227,11 +239,11 @@ export default function ThreeCanvas({
             {/* Soft Contact Ground Shadows */}
             <ContactShadows
               position={[0, -2.4, 0]}
-              opacity={0.16}
-              scale={10}
+              opacity={isMobile ? 0.1 : 0.16}
+              scale={isMobile ? 8 : 10}
               blur={2.5}
               far={4}
-              resolution={256}
+              resolution={isMobile ? 128 : 256}
             />
           </Suspense>
         </Canvas>

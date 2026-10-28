@@ -14,12 +14,15 @@ export default function PaymentEcosystem3D({ scrollProgress = 0, activeStep = 0,
   const particle2Ref = useRef();
   const particle3Ref = useRef();
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const responsiveScale = isMobile ? 0.58 : 0.84;
+
   // Define 3D Node coordinates with centered vertical distribution
   const nodes = useMemo(() => [
-    { id: 'user', name: 'User / App', pos: [-2.6, 0.8, 0], color: '#38BDF8', defaultScale: 1.0 },
+    { id: 'user', name: 'User / App', pos: [-2.4, 0.75, 0], color: '#38BDF8', defaultScale: 1.0 },
     { id: 'smart2pay', name: 'Smart2Pay Core', pos: [0, 0.1, 0.4], color: '#1856F3', defaultScale: 1.3 },
-    { id: 'bank', name: 'Multi-Bank Switch', pos: [2.6, 0.8, -0.4], color: '#10B981', defaultScale: 1.0 },
-    { id: 'merchant', name: 'Instant Settlement', pos: [0, -1.5, 0.2], color: '#F59E0B', defaultScale: 1.0 }
+    { id: 'bank', name: 'Multi-Bank Switch', pos: [2.4, 0.75, -0.4], color: '#10B981', defaultScale: 1.0 },
+    { id: 'merchant', name: 'Instant Settlement', pos: [0, -1.45, 0.2], color: '#F59E0B', defaultScale: 1.0 }
   ], []);
 
   useFrame((state) => {
@@ -80,7 +83,7 @@ export default function PaymentEcosystem3D({ scrollProgress = 0, activeStep = 0,
   });
 
   return (
-    <group ref={groupRef} position={[0, 0.1, 0]} scale={[0.84, 0.84, 0.84]}>
+    <group ref={groupRef} position={[0, 0.1, 0]} scale={[responsiveScale, responsiveScale, responsiveScale]}>
       
       {/* Connector Lines between Nodes */}
       <Line

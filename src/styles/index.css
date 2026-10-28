@@ -17,6 +17,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 
   /* High-Contrast Selection for Effortless Text Copying & Visibility */
@@ -82,6 +85,21 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
+}
+
+/* Minimalist Modern In-Chat Scrollbar */
+[data-lenis-prevent]::-webkit-scrollbar {
+  width: 5px;
+}
+[data-lenis-prevent]::-webkit-scrollbar-track {
+  background: transparent;
+}
+[data-lenis-prevent]::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+[data-lenis-prevent]::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
 }
 
 .lenis.lenis-stopped {

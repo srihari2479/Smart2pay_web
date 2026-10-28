@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../navigation/Navbar';
 import Footer from '../footer/Footer';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 export default function LegalLayout({ title, lastUpdated, children }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -129,13 +130,17 @@ export default function LegalLayout({ title, lastUpdated, children }) {
 
                   <div className="pt-2 border-t border-[#E2E8F0]">
                     <a 
-                      href="https://wa.me/918838607449" 
+                      href="https://wa.me/918838607449?text=Hi%20Smart2Pay%20Team%2C%20I%20would%20like%20to%20know%20more%20about%20Smart2Pay%20B2B%20services" 
                       target="_blank" 
                       rel="noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#128C7E] font-bold text-xs transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#10B981] hover:border-[#34D399] bg-[#10B981]/10 hover:bg-[#10B981]/20 text-[#10B981] hover:text-[#34D399] font-bold text-xs transition-all duration-200 shadow-xs"
                     >
-                      <MessageSquare size={13} />
-                      <span>Chat on WhatsApp: +91 8838607449</span>
+                      <img
+                        src={getAssetUrl('assets/icons/whatsapp_logo.png')}
+                        alt="WhatsApp"
+                        className="w-4 h-4 object-contain shrink-0"
+                      />
+                      <span>WhatsApp: +91 8838607449</span>
                     </a>
                   </div>
                 </div>

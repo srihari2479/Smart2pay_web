@@ -8,6 +8,8 @@ import Grievance from './pages/Grievance';
 import DeleteAccount from './pages/DeleteAccount';
 import NotFound from './pages/NotFound';
 import { useLenisSmoothScroll } from './hooks/useLenisSmoothScroll';
+import FloatingSupportWidget from './components/chatbot/FloatingSupportWidget';
+import { setActiveSectionManually } from './hooks/useScrollProgress';
 
 /**
  * Helper component that resets window scroll position on route change
@@ -18,8 +20,9 @@ function ScrollToTop({ scrollTo }) {
   useEffect(() => {
     // If navigating back to Home with targetSection in state
     if (state?.targetSection) {
+      setActiveSectionManually(state.targetSection, 1200);
       setTimeout(() => {
-        scrollTo(`#${state.targetSection}`);
+        scrollTo(`#${state.targetSection}`, { offset: -80 });
       }, 100);
       return;
     }
@@ -57,6 +60,7 @@ export default function App() {
         <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <FloatingSupportWidget />
     </>
   );
 }

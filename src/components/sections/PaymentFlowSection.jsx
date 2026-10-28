@@ -157,7 +157,7 @@ export default function PaymentFlowSection() {
               <ThreeCanvas
                 scene="ecosystem"
                 activeStep={activeStep}
-                height="h-[360px] sm:h-[400px] lg:h-[420px]"
+                height="h-[270px] sm:h-[360px] lg:h-[420px]"
               />
             </div>
 
@@ -202,59 +202,59 @@ export default function PaymentFlowSection() {
                   key={step.id}
                   ref={(el) => (cardRefs.current[index] = el)}
                   onClick={() => handleCardClick(index)}
-                  className={`relative z-10 cursor-pointer p-6 sm:p-8 rounded-3xl transition-all duration-500 ease-out bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] ${
+                  className={`relative z-10 cursor-pointer p-4 sm:p-7 rounded-2xl sm:rounded-3xl transition-all duration-500 ease-out bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#EEF2F6] ${
                     isActive
                       ? 'border-2 border-[#1856F3] shadow-[0_4px_16px_rgba(24,86,243,0.15),-4px_-4px_12px_rgba(255,255,255,0.95)] scale-[1.01] opacity-100'
                       : 'border border-white/95 shadow-[2px_3px_8px_rgba(163,177,198,0.15),-2px_-3px_8px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 hover:shadow-[4px_6px_12px_rgba(163,177,198,0.2)] opacity-75 hover:opacity-95'
                   }`}
                 >
-                  <div className="flex items-start gap-4 sm:gap-5">
+                  <div className="flex items-start gap-3 sm:gap-5">
                     
                     {/* Step Icon Coin */}
                     <div
-                      className={`w-13 h-13 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-all duration-400 ${
-                        isActive ? 'scale-110 shadow-[0_8px_20px_rgba(24,86,243,0.35)]' : ''
+                      className={`w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center text-white shrink-0 shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-all duration-400 ${
+                        isActive ? 'scale-105 sm:scale-110 shadow-[0_8px_20px_rgba(24,86,243,0.35)]' : ''
                       }`}
                       style={{ backgroundColor: step.color }}
                     >
-                      <Icon size={24} />
+                      <Icon size={20} className="sm:w-6 sm:h-6" />
                     </div>
 
                     {/* Step Content */}
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-xs font-black uppercase tracking-wider text-[#64748B]">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1 mb-1.5 flex-wrap">
+                        <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider text-[#64748B]">
                           Step 0{index + 1} • {step.category}
                         </span>
                         {isActive && (
-                          <span className="text-xs font-black text-[#1856F3] bg-[#EBF1FF] px-2.5 py-0.5 rounded-full border border-blue-200/60 flex items-center gap-1 shadow-xs animate-fadeIn">
-                            <CheckCircle2 size={13} /> Active Node
+                          <span className="text-[10px] sm:text-xs font-black text-[#1856F3] bg-[#EBF1FF] px-2 py-0.5 rounded-full border border-blue-200/60 flex items-center gap-1 shadow-xs animate-fadeIn shrink-0">
+                            <CheckCircle2 size={11} /> Active
                           </span>
                         )}
                       </div>
 
-                      <h3 className="text-lg sm:text-xl font-black text-[#042656] mb-2 tracking-tight">
+                      <h3 className="text-base sm:text-xl font-black text-[#042656] mb-1.5 tracking-tight">
                         {step.title}
                       </h3>
 
-                      <p className="text-sm text-[#475569] leading-relaxed font-medium">
+                      <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-medium">
                         {step.desc}
                       </p>
 
                       {/* Telemetry Metrics on active card */}
                       {isActive && (
-                        <div className="mt-5 pt-4 border-t border-[#CBD5E1]/60 grid grid-cols-3 gap-2 text-xs animate-fadeIn">
-                          <div>
-                            <span className="text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Latency</span>
-                            <span className="font-mono font-black text-[#042656] text-sm">{step.telemetry.speed}</span>
+                        <div className="mt-4 pt-3 border-t border-[#CBD5E1]/60 grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs animate-fadeIn">
+                          <div className="bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs">
+                            <span className="text-[9.5px] sm:text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Latency</span>
+                            <span className="font-mono font-black text-[#042656] text-xs sm:text-sm block">{step.telemetry.speed}</span>
                           </div>
-                          <div>
-                            <span className="text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Validation</span>
-                            <span className="font-mono font-black text-[#059669] text-xs">{step.telemetry.status}</span>
+                          <div className="bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs">
+                            <span className="text-[9.5px] sm:text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Validation</span>
+                            <span className="font-mono font-bold text-[#059669] text-[11px] sm:text-xs block leading-tight">{step.telemetry.status}</span>
                           </div>
-                          <div>
-                            <span className="text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Security</span>
-                            <span className="font-mono font-black text-[#1856F3] text-xs">{step.telemetry.method}</span>
+                          <div className="col-span-2 sm:col-span-1 bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs">
+                            <span className="text-[9.5px] sm:text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Security</span>
+                            <span className="font-mono font-bold text-[#1856F3] text-[11px] sm:text-xs block leading-tight">{step.telemetry.method}</span>
                           </div>
                         </div>
                       )}

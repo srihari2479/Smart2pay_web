@@ -56,19 +56,19 @@ export default function FeeCalculatorSection({ onOpenDemoModal }) {
           subtitle="Estimate your monthly payment processing costs and calculate your annual merchant savings with Smart2Pay."
         />
 
-        <div className="max-w-4xl mx-auto neu-raised-lg p-6 sm:p-10 bg-white border border-white/90">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div className="max-w-4xl mx-auto neu-raised-lg p-4 sm:p-8 lg:p-10 bg-white border border-white/90 rounded-2xl sm:rounded-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
             
             {/* Left Column: Sliders & Config */}
-            <div className="md:col-span-7 flex flex-col gap-6">
+            <div className="md:col-span-7 flex flex-col gap-5 sm:gap-6">
               
               {/* Slider 1: Monthly Volume */}
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold text-[#64748B] uppercase tracking-wider">
+                <div className="flex items-center justify-between mb-2 flex-wrap gap-1">
+                  <span className="text-[11px] sm:text-xs font-bold text-[#64748B] uppercase tracking-wider">
                     Monthly Processing Volume:
                   </span>
-                  <span className="text-lg font-bold font-mono text-[#042656]">
+                  <span className="text-base sm:text-lg font-black font-mono text-[#042656] whitespace-nowrap">
                     ₹{(monthlyVolume / 100000).toFixed(1)} Lakhs
                   </span>
                 </div>
@@ -81,7 +81,7 @@ export default function FeeCalculatorSection({ onOpenDemoModal }) {
                   onChange={(e) => setMonthlyVolume(Number(e.target.value))}
                   className="w-full h-2.5 bg-[#E2E8F0] rounded-lg appearance-none cursor-pointer accent-[#1856F3]"
                 />
-                <div className="flex justify-between text-[11px] text-[#94A3B8] font-mono mt-1">
+                <div className="flex justify-between text-[10.5px] sm:text-[11px] text-[#94A3B8] font-mono mt-1">
                   <span>₹2 Lakhs</span>
                   <span>₹1 Crore</span>
                   <span>₹2 Crores+</span>
@@ -90,11 +90,11 @@ export default function FeeCalculatorSection({ onOpenDemoModal }) {
 
               {/* Slider 2: Card vs UPI Split */}
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold text-[#64748B] uppercase tracking-wider">
+                <div className="flex items-center justify-between mb-2 flex-wrap gap-1">
+                  <span className="text-[11px] sm:text-xs font-bold text-[#64748B] uppercase tracking-wider">
                     Credit Card & Net Banking Share:
                   </span>
-                  <span className="text-lg font-bold font-mono text-[#1856F3]">
+                  <span className="text-xs sm:text-sm font-black font-mono text-[#1856F3] whitespace-nowrap">
                     {cardPercentage}% Cards / {100 - cardPercentage}% UPI
                   </span>
                 </div>
@@ -110,21 +110,21 @@ export default function FeeCalculatorSection({ onOpenDemoModal }) {
               </div>
 
               {/* Feature Inclusions Pill List */}
-              <div className="grid grid-cols-2 gap-2 pt-4 border-t border-[#E2E8F0] text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-[#E2E8F0] text-xs">
                 <div className="flex items-center gap-2 text-[#334155]">
-                  <CheckCircle2 size={15} className="text-[#10B981]" />
+                  <CheckCircle2 size={14} className="text-[#10B981] shrink-0" />
                   <span>Zero UPI Processing Fee</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#334155]">
-                  <CheckCircle2 size={15} className="text-[#10B981]" />
+                  <CheckCircle2 size={14} className="text-[#10B981] shrink-0" />
                   <span>Free Instant T+0 Settlements</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#334155]">
-                  <CheckCircle2 size={15} className="text-[#10B981]" />
+                  <CheckCircle2 size={14} className="text-[#10B981] shrink-0" />
                   <span>No Setup or Annual AMC</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#334155]">
-                  <CheckCircle2 size={15} className="text-[#10B981]" />
+                  <CheckCircle2 size={14} className="text-[#10B981] shrink-0" />
                   <span>24/7 Dedicated Support SLA</span>
                 </div>
               </div>
@@ -133,27 +133,27 @@ export default function FeeCalculatorSection({ onOpenDemoModal }) {
 
             {/* Right Column: Estimated Savings Card */}
             <div className="md:col-span-5">
-              <div className="neu-sunken p-6 rounded-3xl bg-[#F0F4F8] border border-white flex flex-col items-center text-center">
+              <div className="neu-sunken p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#F0F4F8] border border-white flex flex-col items-center text-center">
                 
-                <span className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-1">
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#64748B] mb-1">
                   Estimated Annual Savings
                 </span>
 
-                <div className="text-3xl sm:text-4xl font-extrabold text-[#10B981] font-mono mb-4">
+                <div className="text-2xl sm:text-4xl font-extrabold text-[#10B981] font-mono mb-4">
                   ₹{Math.round(calculations.annualSavings).toLocaleString('en-IN')}
                 </div>
 
-                <div className="w-full space-y-2.5 text-xs pb-4 mb-4 border-b border-[#CBD5E1]/60 text-left">
+                <div className="w-full space-y-2 text-xs pb-3.5 mb-3.5 border-b border-[#CBD5E1]/60 text-left">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#64748B]">Legacy Gateways:</span>
-                    <span className="font-mono font-bold text-[#E11D48] line-through">
+                    <span className="text-[#64748B] text-[11px] sm:text-xs">Legacy Gateways:</span>
+                    <span className="font-mono font-bold text-[#E11D48] line-through text-[11px] sm:text-xs">
                       ₹{Math.round(calculations.standardTotalMonthly).toLocaleString('en-IN')}/mo
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-[#64748B]">Smart2Pay Optimized:</span>
-                    <span className="font-mono font-bold text-[#042656]">
+                    <span className="text-[#64748B] text-[11px] sm:text-xs">Smart2Pay Optimized:</span>
+                    <span className="font-mono font-bold text-[#042656] text-[11px] sm:text-xs">
                       ₹{Math.round(calculations.smart2payTotalMonthly).toLocaleString('en-IN')}/mo
                     </span>
                   </div>
@@ -165,7 +165,7 @@ export default function FeeCalculatorSection({ onOpenDemoModal }) {
                   icon={ArrowRight}
                   iconPosition="right"
                   onClick={onOpenDemoModal}
-                  className="w-full justify-center text-sm font-bold"
+                  className="w-full h-11 sm:h-12 justify-center text-xs sm:text-sm font-bold shadow-md whitespace-nowrap"
                 >
                   Claim Custom Rate
                 </Button>
