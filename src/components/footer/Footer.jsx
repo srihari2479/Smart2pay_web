@@ -132,7 +132,7 @@ export default function Footer() {
                 <MapPin size={18} className="text-[#38BDF8] shrink-0 mt-0.5" />
                 <p className="leading-relaxed text-white/75 text-xs sm:text-sm">
                   <strong className="text-white block font-semibold mb-0.5">SMART2PAY</strong>
-                  <span className="text-[#38BDF8] text-xs font-medium block mb-1">B2B White Label Solution • Powered by Buddica Global Solutions</span>
+                  <span className="text-[#38BDF8] text-xs font-medium block mb-1">Powered by Buddica Global Solutions</span>
                   NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default function Footer() {
           
           {/* Left: Entity & Copyright */}
           <p className="text-center sm:text-left text-white/80 font-medium">
-            © {currentYear} <span className="text-white font-bold">Buddica Global Solutions Pvt Ltd</span> (Smart2Pay B2B White Label Solution). All rights reserved.
+            © {currentYear} <span className="text-white font-bold">Smart2Pay</span> • Powered by <span className="text-white font-bold">Buddica Global Solutions Pvt Ltd</span>. All rights reserved.
           </p>
 
           {/* Right: Clean Horizontal Legal & Security Links */}

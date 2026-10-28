@@ -16,7 +16,7 @@ const INITIAL_MESSAGES = [
   {
     id: 'welcome-1',
     role: 'assistant',
-    content: `Hello! 👋 Welcome to **Smart2Pay B2B**.\n\nI am your AI Assistant for white-label payment gateway infrastructure, multi-bank routing, instant T+0 settlements, and merchant services. How can I assist you today?`,
+    content: `Hello! 👋 Welcome to **Smart2Pay** (Powered by Buddica Global Solutions).\n\nI am your AI Assistant for intelligent payment gateway infrastructure, multi-bank routing, instant T+0 settlements, and merchant services. How can I assist you today?`,
     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   },
 ];

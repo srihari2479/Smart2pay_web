@@ -103,7 +103,7 @@ export default function Grievance() {
           <span>Customer Support & Designated Grievance Redressal Framework</span>
         </div>
         <p className="text-sm text-[#334155] leading-relaxed">
-          This Grievance Redressal Policy explains how customers, merchants, business partners, and other users can raise complaints about <strong>Smart2Pay</strong> (an enterprise B2B White-Label Fintech Platform operated by <strong>Buddica Global Solutions Pvt Ltd</strong>, alongside its fintech partner network including HappyPay) and how such complaints will be acknowledged, investigated, and resolved in a transparent and time-bound manner.
+          This Grievance Redressal Policy explains how customers, merchants, business partners, and other users can raise complaints about <strong>Smart2Pay</strong> (Powered by <strong>Buddica Global Solutions Pvt Ltd</strong>, alongside its fintech partner network including HappyPay) and how such complaints will be acknowledged, investigated, and resolved in a transparent and time-bound manner.
         </p>
         <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-semibold text-[#64748B]">
           <span className="inline-flex items-center gap-1 text-[#042656]">
@@ -231,7 +231,7 @@ export default function Grievance() {
           <span>ABOUT SMART2PAY & BUDDICA GLOBAL SOLUTIONS</span>
         </h2>
         <p className="text-sm text-[#334155] leading-relaxed">
-          <strong>Smart2Pay</strong> is a specialized B2B white-label digital services and payment infrastructure platform operated by <strong>Buddica Global Solutions Private Limited</strong> (“Buddica”, “Smart2Pay”, “we”, “us” or “our”), functioning collaboratively across our digital financial ecosystem alongside partner platforms including HappyPay. Through its portal, APIs, and business channels, Smart2Pay facilitates mobile recharges, BBPS utility bill collections, multi-bank payment rails, dynamic QR collections, payout switches, digital gold, and related enterprise services displayed from time to time.
+          <strong>Smart2Pay</strong> is a specialized digital services and payment infrastructure platform operated and Powered by <strong>Buddica Global Solutions Private Limited</strong> (“Buddica”, “Smart2Pay”, “we”, “us” or “our”), functioning collaboratively across our digital financial ecosystem alongside partner platforms including HappyPay. Through its portal, APIs, and business channels, Smart2Pay facilitates mobile recharges, BBPS utility bill collections, multi-bank payment rails, dynamic QR collections, payout switches, digital gold, and related enterprise services displayed from time to time.
         </p>
         <p className="text-sm text-[#475569] leading-relaxed">
           The exact service provider, payment aggregator, partner bank, biller, or regulated entity involved may vary by transaction. For transactions processed by a partner bank, payment system operator, biller, merchant, or third-party service provider, Smart2Pay coordinates with the relevant entity where appropriate. This does not replace any complaint or dispute process that the relevant bank, issuer, payment system operator, biller, or regulator makes available directly to the customer.
@@ -563,7 +563,7 @@ export default function Grievance() {
               SMART2PAY
             </h3>
             <span className="text-xs font-bold text-[#1856F3] uppercase tracking-wider block">
-              Enterprise B2B White-Label Fintech Infrastructure • Powered by Buddica Global Solutions
+              Powered by Buddica Global Solutions
             </span>
           </div>
 

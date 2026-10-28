@@ -104,7 +104,7 @@ export default function LegalLayout({ title, lastUpdated, children }) {
                       <span>SMART2PAY</span>
                     </div>
                     <span className="text-[10px] font-semibold text-[#1856F3] uppercase tracking-wider block pl-5">
-                      White Label Solution • Buddica Global
+                      Powered by Buddica Global Solutions
                     </span>
                   </div>
 

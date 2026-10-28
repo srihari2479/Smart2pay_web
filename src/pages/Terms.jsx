@@ -7,7 +7,7 @@ export default function Terms() {
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-[#0F172A]">1. Introduction & Acceptance</h2>
         <p>
-          These Terms of Service ("Terms") constitute a legally binding agreement between you (whether individually or on behalf of an entity, "Merchant", "User", or "You") and <strong>Buddica Global Solutions Pvt Ltd</strong> ("Company", "We", "Us"), the developer and operator of <strong>Smart2Pay</strong>, an enterprise B2B White-Label Fintech Solution operating alongside its allied network platforms including HappyPay.
+          These Terms of Service ("Terms") constitute a legally binding agreement between you (whether individually or on behalf of an entity, "Merchant", "User", or "You") and <strong>Buddica Global Solutions Pvt Ltd</strong> ("Company", "We", "Us"), the developer and operator of <strong>Smart2Pay</strong>, Powered by <strong>Buddica Global Solutions Pvt Ltd</strong> operating alongside its allied network platforms including HappyPay.
         </p>
         <p>
           By accessing, registering with, or utilizing the Smart2Pay payment infrastructure, APIs, soundbox hardware, SDKs, or web portal available at <strong>https://smart2pay.co.in</strong>, you acknowledge that you have read, understood, and agree to be bound by all the provisions of these Terms and our related regulatory policies.
@@ -15,12 +15,12 @@ export default function Terms() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-bold text-[#0F172A]">2. Scope of Services & B2B White-Label Architecture</h2>
+        <h2 className="text-xl font-bold text-[#0F172A]">2. Scope of Services & Platform Architecture</h2>
         <p>
           Smart2Pay provides B2B technology aggregation, multi-bank transaction routing, BBPS utility collection rails, UPI dynamic QR processing, payment gateway switching, automated settlement engines, and merchant reconciliation consoles.
         </p>
         <p>
-          As an enterprise B2B white-label platform powered by Buddica Global Solutions Pvt Ltd, Smart2Pay acts as a technical service provider and payment aggregator intermediary connecting merchants with scheduled commercial banking institutions, card payment networks (Visa, Mastercard, RuPay, Amex, Diners), and the National Payments Corporation of India (NPCI).
+          As a digital payment platform powered by Buddica Global Solutions Pvt Ltd, Smart2Pay acts as a technical service provider and payment aggregator intermediary connecting merchants with scheduled commercial banking institutions, card payment networks (Visa, Mastercard, RuPay, Amex, Diners), and the National Payments Corporation of India (NPCI).
         </p>
       </section>
 
@@ -70,7 +70,7 @@ export default function Terms() {
       <section className="space-y-4 pt-4 border-t border-[#E2E8F0]">
         <h2 className="text-xl font-bold text-[#0F172A]">7. Official Entity & Contact Details</h2>
         <p className="text-sm">
-          <strong>SMART2PAY</strong> (B2B White Label Fintech Solution • Powered by Buddica Global Solutions Pvt Ltd)<br />
+          <strong>SMART2PAY</strong> (Powered by Buddica Global Solutions Pvt Ltd)<br />
           NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082<br />
           Phone: <a href="tel:+919750585861" className="text-[#1856F3] underline font-bold">+91 9750585861</a> | Email: <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] underline font-bold">smart2payment@gmail.com</a><br />
           WhatsApp: <a href="https://wa.me/918838607449" target="_blank" rel="noreferrer" className="text-[#1856F3] underline font-bold">+91 8838607449</a><br />

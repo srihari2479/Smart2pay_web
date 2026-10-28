@@ -7,13 +7,13 @@ export default function Privacy() {
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-[#0F172A]">1. Overview & Commitment</h2>
         <p>
-          At <strong>Buddica Global Solutions Pvt Ltd</strong>, developer and operator of <strong>Smart2Pay</strong> (an enterprise B2B White-Label Fintech Solution operating across our fintech network alongside HappyPay), we are deeply committed to safeguarding your privacy and protecting the confidentiality and security of personal, merchant, and transaction data in strict compliance with the Information Technology Act, 2000, and the Digital Personal Data Protection (DPDP) Act, 2023.
+          At <strong>Buddica Global Solutions Pvt Ltd</strong>, developer and operator of <strong>Smart2Pay</strong> (Powered by Buddica Global Solutions Pvt Ltd), we are deeply committed to safeguarding your privacy and protecting the confidentiality and security of personal, merchant, and transaction data in strict compliance with the Information Technology Act, 2000, and the Digital Personal Data Protection (DPDP) Act, 2023.
         </p>
       </section>
 
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-[#0F172A]">2. Information We Collect</h2>
-        <p>In operating the Smart2Pay B2B white-label platform, we collect:</p>
+        <p>In operating the Smart2Pay platform, we collect:</p>
         <ul className="list-disc pl-5 space-y-2">
           <li>
             <strong>Identity & KYB Data:</strong> Full Name, Business/Entity Name, PAN, Aadhaar information (masked/hashed via UIDAI guidelines), GSTIN, certificate of incorporation.
@@ -64,7 +64,7 @@ export default function Privacy() {
       <section className="space-y-4 pt-4 border-t border-[#E2E8F0]">
         <h2 className="text-xl font-bold text-[#0F172A]">6. Data Protection Officer (DPO) & Contact</h2>
         <p className="text-sm">
-          <strong>SMART2PAY</strong> (B2B White Label Fintech Solution • Powered by Buddica Global Solutions Pvt Ltd)<br />
+          <strong>SMART2PAY</strong> (Powered by Buddica Global Solutions Pvt Ltd)<br />
           NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082<br />
           Email: <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] underline font-bold">smart2payment@gmail.com</a> | Phone: <a href="tel:+919750585861" className="text-[#1856F3] underline font-bold">+91 9750585861</a><br />
           WhatsApp: <a href="https://wa.me/918838607449" target="_blank" rel="noreferrer" className="text-[#1856F3] underline font-bold">+91 8838607449</a><br />

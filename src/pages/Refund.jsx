@@ -7,7 +7,7 @@ export default function Refund() {
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-[#0F172A]">1. Policy Objective & Scope</h2>
         <p>
-          This Refund, Cancellation, and Chargeback Policy outlines the procedures, SLAs, and rules governing transaction cancellations, reversals, and failed payment resolutions across all services powered by <strong>Smart2Pay</strong>, an enterprise B2B White-Label Fintech Solution operated by <strong>Buddica Global Solutions Pvt Ltd</strong> alongside its fintech partner network including HappyPay.
+          This Refund, Cancellation, and Chargeback Policy outlines the procedures, SLAs, and rules governing transaction cancellations, reversals, and failed payment resolutions across all services powered by <strong>Smart2Pay</strong>, operated and Powered by <strong>Buddica Global Solutions Pvt Ltd</strong> alongside its fintech partner network including HappyPay.
         </p>
       </section>
 
@@ -56,7 +56,7 @@ export default function Refund() {
         <h2 className="text-xl font-bold text-[#0F172A]">6. Refund & Grievance Support</h2>
         <p className="text-sm">
           For refund queries, please provide your Transaction ID (e.g. S2P-XXXXXX), date, and amount:<br />
-          <strong>SMART2PAY</strong> (B2B White Label Fintech Solution • Powered by Buddica Global Solutions Pvt Ltd)<br />
+          <strong>SMART2PAY</strong> (Powered by Buddica Global Solutions Pvt Ltd)<br />
           NO.24, SRP COLONY, 8TH STREET, PAPER MILLS ROAD, PERAVALLUR, CHENNAI - 600082<br />
           Email: <a href="mailto:smart2payment@gmail.com" className="text-[#1856F3] font-bold underline">smart2payment@gmail.com</a><br />
           Phone: <a href="tel:+919750585861" className="text-[#1856F3] font-bold underline">+91 9750585861</a><br />

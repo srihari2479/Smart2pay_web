@@ -32,7 +32,7 @@ export default function PaymentFlowSection() {
       icon: Smartphone,
       color: '#38BDF8',
       desc: 'Customer initiates payment via UPI dynamic QR, Credit Card, Net Banking, or BBPS utility on web or mobile app.',
-      telemetry: { speed: '12ms', status: 'Payload Signed', method: 'End-to-End Encrypted' }
+      telemetry: { speed: '12ms', status: 'Payload Signed', method: 'E2E Encrypted' }
     },
     {
       id: 1,
@@ -41,7 +41,7 @@ export default function PaymentFlowSection() {
       icon: Cpu,
       color: '#1856F3',
       desc: 'Our AI routing engine analyzes 50+ bank switches in real-time, dynamically picking the highest success probability path.',
-      telemetry: { speed: '28ms', status: 'Bank Latency 0.04s', method: 'Dynamic Fallback Ready' }
+      telemetry: { speed: '28ms', status: 'Latency 0.04s', method: 'Auto Fallback' }
     },
     {
       id: 2,
@@ -50,7 +50,7 @@ export default function PaymentFlowSection() {
       icon: Building2,
       color: '#10B981',
       desc: 'Secure 2-factor authentication & authorization processed directly via issuer CBS & NPCI clearinghouse.',
-      telemetry: { speed: '85ms', status: '2FA Authorized', method: '256-Bit TLS 1.3' }
+      telemetry: { speed: '85ms', status: '2FA Authorized', method: '256-Bit TLS' }
     },
     {
       id: 3,
@@ -59,7 +59,7 @@ export default function PaymentFlowSection() {
       icon: Store,
       color: '#F59E0B',
       desc: 'Funds cleared with automated reconciliation, webhooks dispatch, and instant T+0 merchant ledger credit.',
-      telemetry: { speed: '17ms', status: 'Ledger Reconciled', method: 'Zero Chargeback Risk' }
+      telemetry: { speed: '17ms', status: 'Ledger Settled', method: 'Zero Chargeback' }
     }
   ];
 
@@ -241,20 +241,20 @@ export default function PaymentFlowSection() {
                         {step.desc}
                       </p>
 
-                      {/* Telemetry Metrics on active card */}
+                      {/* Telemetry Metrics on active card - Uniform height & single line */}
                       {isActive && (
-                        <div className="mt-4 pt-3 border-t border-[#CBD5E1]/60 grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs animate-fadeIn">
-                          <div className="bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs">
+                        <div className="mt-4 pt-3 border-t border-[#CBD5E1]/60 grid grid-cols-3 gap-2 text-xs animate-fadeIn">
+                          <div className="bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs flex flex-col justify-center min-w-0">
                             <span className="text-[9.5px] sm:text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Latency</span>
-                            <span className="font-mono font-black text-[#042656] text-xs sm:text-sm block">{step.telemetry.speed}</span>
+                            <span className="font-mono font-black text-[#042656] text-xs sm:text-sm block whitespace-nowrap">{step.telemetry.speed}</span>
                           </div>
-                          <div className="bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs">
+                          <div className="bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs flex flex-col justify-center min-w-0">
                             <span className="text-[9.5px] sm:text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Validation</span>
-                            <span className="font-mono font-bold text-[#059669] text-[11px] sm:text-xs block leading-tight">{step.telemetry.status}</span>
+                            <span className="font-mono font-bold text-[#059669] text-[11px] sm:text-xs block whitespace-nowrap">{step.telemetry.status}</span>
                           </div>
-                          <div className="col-span-2 sm:col-span-1 bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs">
+                          <div className="bg-white/80 p-2 sm:p-2.5 rounded-xl border border-white shadow-xs flex flex-col justify-center min-w-0">
                             <span className="text-[9.5px] sm:text-[10px] font-bold text-[#94A3B8] uppercase tracking-wider block">Security</span>
-                            <span className="font-mono font-bold text-[#1856F3] text-[11px] sm:text-xs block leading-tight">{step.telemetry.method}</span>
+                            <span className="font-mono font-bold text-[#1856F3] text-[11px] sm:text-xs block whitespace-nowrap">{step.telemetry.method}</span>
                           </div>
                         </div>
                       )}
