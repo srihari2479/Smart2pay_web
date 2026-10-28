@@ -8,7 +8,10 @@ import {
   ShieldCheck, 
   ArrowUpRight, 
   Heart,
-  ExternalLink
+  ExternalLink,
+  MessageSquare,
+  Send,
+  Scale
 } from 'lucide-react';
 
 import BrandLogo from '../common/BrandLogo';
@@ -87,7 +90,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-white/70">
               <li>
                 <Link to="/terms" className="hover:text-white transition-colors flex items-center gap-1">
-                  <span>Terms & Conditions</span>
+                  <span>Terms of Service</span>
                   <ArrowUpRight size={13} className="text-white/40" />
                 </Link>
               </li>
@@ -104,8 +107,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/grievance" className="hover:text-white transition-colors flex items-center gap-1 text-emerald-300 hover:text-emerald-200">
+                  <span>Grievance Redressal</span>
+                  <ArrowUpRight size={13} className="text-emerald-300/40" />
+                </Link>
+              </li>
+              <li>
                 <Link to="/delete-account" className="hover:text-white transition-colors flex items-center gap-1 text-rose-300 hover:text-rose-200">
-                  <span>Request to Delete Account</span>
+                  <span>Delete Account</span>
                 </Link>
               </li>
             </ul>
@@ -117,32 +126,52 @@ export default function Footer() {
               Corporate Office & Contact
             </h4>
             
-            <div className="space-y-4 text-sm text-white/80">
+            <div className="space-y-3.5 text-sm text-white/80">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#38BDF8] shrink-0 mt-0.5" />
                 <p className="leading-relaxed text-white/75 text-xs sm:text-sm">
-                  <strong className="text-white block font-semibold mb-0.5">SMART2PAY HEADQUARTERS</strong>
-                  Revenue Ward No 26, no 26-30-19, Yerukuvanipalem, Ramalayam Street, VISAKHAPATNAM, Paravada Industrial Area, Anakapalli, Andhra Pradesh, 531019
+                  <strong className="text-white block font-semibold mb-0.5">BUDDICA GLOBAL SOLUTIONS PVT LTD</strong>
+                  <span className="text-[#38BDF8] text-xs font-medium block mb-1">Operating Smart2Pay (B2B White Label Solution)</span>
+                  Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA.<br />
+                  <span className="text-[11px] text-white/60">Corp Office: Revenue Ward No 26, No. 26-30-19, Yerukuvanipalem, Ramalayam Street, Visakhapatnam, Paravada Industrial Area, Anakapalli, AP – 531019</span>
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-[#38BDF8] shrink-0" />
-                <a href="tel:+918886317755" className="hover:text-white font-mono tracking-wide text-white/90">
-                  +91 8886317755
+                <a href="tel:+918886327755" className="hover:text-white font-mono tracking-wide text-white/90">
+                  +91 8886327755
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-[#38BDF8] shrink-0" />
-                <a href="mailto:Support@smart2pay.biz" className="hover:text-white font-mono text-white/90">
-                  Support@smart2pay.biz
+                <a href="mailto:support@smart2pay.biz" className="hover:text-white font-mono text-white/90">
+                  support@smart2pay.biz
                 </a>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Smartphone size={16} className="text-[#38BDF8] shrink-0" />
-                <span className="font-mono text-white/90">+91 8886317755</span>
+              {/* Instant Messengers */}
+              <div className="flex items-center gap-3 pt-1">
+                <a 
+                  href="https://wa.me/919884548289" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#4ade80] text-xs font-bold transition-all border border-[#25D366]/30"
+                >
+                  <MessageSquare size={13} />
+                  <span>WhatsApp: +91 9884548289</span>
+                </a>
+
+                <a 
+                  href="https://t.me/buddica" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#0088cc]/20 hover:bg-[#0088cc]/30 text-[#38bdf8] text-xs font-bold transition-all border border-[#0088cc]/30"
+                >
+                  <Send size={13} />
+                  <span>Telegram: @buddica</span>
+                </a>
               </div>
             </div>
           </div>
@@ -154,22 +183,25 @@ export default function Footer() {
           
           {/* Left: Entity & Copyright */}
           <p className="text-center sm:text-left text-white/80 font-medium">
-            © {currentYear} <span className="text-white font-bold">Smart2Pay Technologies Pvt Ltd</span>. All rights reserved.
+            © {currentYear} <span className="text-white font-bold">Buddica Global Solutions Pvt Ltd</span> (Smart2Pay B2B White Label Solution). All rights reserved.
           </p>
 
           {/* Right: Clean Horizontal Legal & Security Links */}
-          <div className="flex flex-wrap items-center justify-center gap-5 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold">
               <ShieldCheck size={13} /> PCI-DSS L1
             </span>
-            <Link to="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
             <Link to="/terms" className="hover:text-white transition-colors">
               Terms of Service
             </Link>
+            <Link to="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
             <Link to="/refund" className="hover:text-white transition-colors">
               Refund Policy
+            </Link>
+            <Link to="/grievance" className="hover:text-white transition-colors text-emerald-300">
+              Grievance Redressal
             </Link>
           </div>
 

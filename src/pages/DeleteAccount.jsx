@@ -20,11 +20,11 @@ export default function DeleteAccount() {
   };
 
   return (
-    <LegalLayout title="Request to Delete Account" lastUpdated="January 15, 2026">
+    <LegalLayout title="Request to Delete Account" lastUpdated="October 27, 2026">
       <section className="space-y-4 mb-8">
         <h2 className="text-xl font-bold text-[#0F172A]">Account Deletion & Data Privacy Portal</h2>
         <p>
-          In accordance with our user privacy standards and the Digital Personal Data Protection (DPDP) Act 2023, you may request permanent deletion of your <strong>Smart2Pay</strong> merchant profile and associated non-statutory records.
+          In accordance with our user privacy standards, regulatory guidelines, and the Digital Personal Data Protection (DPDP) Act 2023, you may request permanent deletion of your <strong>Smart2Pay</strong> merchant profile and associated non-statutory records operated by <strong>Buddica Global Solutions Pvt Ltd</strong>.
         </p>
       </section>
 

@@ -165,7 +165,7 @@ export default function Navbar({ onOpenDemoModal, onOpenLoginModal }) {
           <Link
             to="/terms"
             className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition-all whitespace-nowrap ${
-              location.pathname.startsWith('/terms') || location.pathname.startsWith('/privacy') || location.pathname.startsWith('/refund') || location.pathname.startsWith('/delete-account')
+              location.pathname.startsWith('/terms') || location.pathname.startsWith('/privacy') || location.pathname.startsWith('/refund') || location.pathname.startsWith('/delete-account') || location.pathname.startsWith('/grievance')
                 ? 'text-[#1856F3] bg-[#EEF4FF]'
                 : 'text-[#334155] hover:text-[#1856F3] hover:bg-[#EEF4FF]'
             }`}

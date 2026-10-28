@@ -11,7 +11,11 @@ import {
   Calendar,
   Building2,
   Mail,
-  Phone
+  Phone,
+  Scale,
+  MessageSquare,
+  Send,
+  MapPin
 } from 'lucide-react';
 import Navbar from '../navigation/Navbar';
 import Footer from '../footer/Footer';
@@ -23,6 +27,7 @@ export default function LegalLayout({ title, lastUpdated, children }) {
     { name: 'Terms of Service', path: '/terms', icon: FileText },
     { name: 'Privacy Policy', path: '/privacy', icon: ShieldCheck },
     { name: 'Refund Policy', path: '/refund', icon: Banknote },
+    { name: 'Grievance Redressal Policy', path: '/grievance', icon: Scale },
     { name: 'Request to Delete Account', path: '/delete-account', icon: UserX }
   ];
 
@@ -91,27 +96,56 @@ export default function LegalLayout({ title, lastUpdated, children }) {
                 </nav>
 
                 {/* Official Contact Summary Box */}
-                <div className="neu-sunken p-4 rounded-2xl bg-[#F0F4F8] text-xs space-y-2">
-                  <div className="flex items-center gap-2 font-bold text-[#042656]">
-                    <Building2 size={14} className="text-[#1856F3]" />
-                    <span>Smart2Pay Technologies</span>
+                <div className="neu-sunken p-4 rounded-2xl bg-[#F0F4F8] text-xs space-y-2.5">
+                  <div className="space-y-0.5">
+                    <div className="flex items-center gap-2 font-bold text-[#042656]">
+                      <Building2 size={14} className="text-[#1856F3] shrink-0" />
+                      <span>Buddica Global Solutions Pvt Ltd</span>
+                    </div>
+                    <span className="text-[10px] font-semibold text-[#1856F3] uppercase tracking-wider block pl-5">
+                      Smart2Pay B2B White Label
+                    </span>
                   </div>
-                  <p className="text-[11px] text-[#64748B] leading-relaxed">
-                    VISAKHAPATNAM, Andhra Pradesh, 531019
-                  </p>
-                  <div className="pt-2 border-t border-[#E2E8F0] space-y-1">
+
+                  <div className="flex items-start gap-1.5 text-[11px] text-[#64748B] leading-relaxed">
+                    <MapPin size={12} className="text-[#64748B] shrink-0 mt-0.5" />
+                    <span>Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA - 531019</span>
+                  </div>
+
+                  <div className="pt-2 border-t border-[#E2E8F0] space-y-1.5">
                     <div className="flex items-center gap-1.5 text-[#334155]">
-                      <Mail size={12} className="text-[#1856F3]" />
-                      <a href="mailto:Support@smart2pay.biz" className="hover:underline">
-                        Support@smart2pay.biz
+                      <Mail size={12} className="text-[#1856F3] shrink-0" />
+                      <a href="mailto:support@smart2pay.biz" className="hover:underline font-medium truncate">
+                        support@smart2pay.biz
                       </a>
                     </div>
                     <div className="flex items-center gap-1.5 text-[#334155]">
-                      <Phone size={12} className="text-[#1856F3]" />
-                      <a href="tel:+918886317755" className="hover:underline">
-                        +91 8886317755
+                      <Phone size={12} className="text-[#1856F3] shrink-0" />
+                      <a href="tel:+918886327755" className="hover:underline font-medium">
+                        +91 8886327755
                       </a>
                     </div>
+                  </div>
+
+                  <div className="pt-2 border-t border-[#E2E8F0] flex items-center gap-2">
+                    <a 
+                      href="https://wa.me/919884548289" 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg bg-[#25D366]/10 text-[#128C7E] font-bold text-[11px] hover:bg-[#25D366]/20 transition-colors"
+                    >
+                      <MessageSquare size={11} />
+                      <span>WhatsApp</span>
+                    </a>
+                    <a 
+                      href="https://t.me/buddica" 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg bg-[#0088cc]/10 text-[#0088cc] font-bold text-[11px] hover:bg-[#0088cc]/20 transition-colors"
+                    >
+                      <Send size={11} />
+                      <span>Telegram</span>
+                    </a>
                   </div>
                 </div>
 

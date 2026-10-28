@@ -3,11 +3,11 @@ import LegalLayout from '../components/legal/LegalLayout';
 
 export default function Refund() {
   return (
-    <LegalLayout title="Refund, Cancellation & Chargeback Policy" lastUpdated="January 15, 2026">
+    <LegalLayout title="Refund, Cancellation & Chargeback Policy" lastUpdated="October 27, 2026">
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-[#0F172A]">1. Policy Objective & Scope</h2>
         <p>
-          This Refund, Cancellation, and Chargeback Policy outlines the procedures, SLAs, and rules governing transaction cancellations, reversals, and failed payment resolutions across all services powered by <strong>Smart2Pay Technologies Pvt Ltd</strong>.
+          This Refund, Cancellation, and Chargeback Policy outlines the procedures, SLAs, and rules governing transaction cancellations, reversals, and failed payment resolutions across all services powered by <strong>Smart2Pay</strong>, an enterprise B2B White-Label Fintech Solution operated by <strong>Buddica Global Solutions Pvt Ltd</strong> alongside its fintech partner network including HappyPay.
         </p>
       </section>
 
@@ -56,9 +56,12 @@ export default function Refund() {
         <h2 className="text-xl font-bold text-[#0F172A]">6. Refund & Grievance Support</h2>
         <p className="text-sm">
           For refund queries, please provide your Transaction ID (e.g. S2P-XXXXXX), date, and amount:<br />
-          <strong>Smart2Pay Technologies Pvt Ltd</strong><br />
-          Email: <a href="mailto:Support@smart2pay.biz" className="text-[#1856F3] font-bold">Support@smart2pay.biz</a><br />
-          Phone: +91 8886317755
+          <strong>Buddica Global Solutions Pvt Ltd</strong> (Operating Smart2Pay B2B White Label Platform)<br />
+          Sankara Matam Rd, Visakhapatnam, Andhra Pradesh, INDIA - 531019<br />
+          Email: <a href="mailto:support@smart2pay.biz" className="text-[#1856F3] font-bold underline">support@smart2pay.biz</a><br />
+          Phone: <a href="tel:+918886327755" className="text-[#1856F3] font-bold underline">+91 8886327755</a><br />
+          WhatsApp: <a href="https://wa.me/919884548289" target="_blank" rel="noreferrer" className="text-[#1856F3] underline">+91 9884548289</a> | Telegram: <a href="https://t.me/buddica" target="_blank" rel="noreferrer" className="text-[#1856F3] underline">t.me/buddica</a><br />
+          Website: <a href="https://smart2pay.co.in" className="text-[#1856F3] underline">https://smart2pay.co.in</a>
         </p>
       </section>
     </LegalLayout>

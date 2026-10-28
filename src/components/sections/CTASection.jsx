@@ -77,13 +77,13 @@ export default function CTASection({ onOpenDemoModal }) {
                 </button>
 
                 <a
-                  href="tel:+918886317755"
+                  href="tel:+918886327755"
                   className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm sm:text-base border border-white/20 backdrop-blur-md shadow-xs hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <div className="w-7 h-7 rounded-lg bg-white/15 flex items-center justify-center text-[#38BDF8]">
                     <Headphones size={15} />
                   </div>
-                  <span>+91 8886317755</span>
+                  <span>+91 8886327755</span>
                 </a>
               </div>
 

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
+import Grievance from './pages/Grievance';
 import DeleteAccount from './pages/DeleteAccount';
 import NotFound from './pages/NotFound';
 import { useLenisSmoothScroll } from './hooks/useLenisSmoothScroll';
@@ -47,8 +48,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/terms-of-service" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/refund" element={<Refund />} />
+        <Route path="/grievance" element={<Grievance />} />
+        <Route path="/grievance-policy" element={<Grievance />} />
         <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
